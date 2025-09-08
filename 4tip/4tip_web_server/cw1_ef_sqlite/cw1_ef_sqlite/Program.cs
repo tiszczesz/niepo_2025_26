@@ -10,6 +10,7 @@ builder.Services
     .AddDbContext<BookContext>(
         options => options.UseSqlite(connString)
         );
+//tutaj następuje budowa aplikacji
 var app = builder.Build();
 app.UseStaticFiles();
 //app.MapGet("/", () => "Hello World!");
