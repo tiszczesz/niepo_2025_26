@@ -5,6 +5,7 @@ import { useState } from 'react';
 
 function App() {
   const [count, setCount] = useState(10);
+  const [text, setText] = useState("");
 
   return (
     <>
@@ -29,6 +30,11 @@ function App() {
               width:`${count}px`,
               height:`${count}px`,
               }}></div>
+          </section>
+          <section>
+            <textarea value={text} onChange={(e) => setText(e.target.value)}></textarea>
+            <p>{text}</p>
+            <div dangerouslySetInnerHTML={{ __html: text.replace(/\n/g, "<br />") }} />
           </section>
         </main>
       </div>
