@@ -93,3 +93,35 @@ const c = 45; //nie mozna redeklarować i nie można zmieniać zawartości
   ```js
   let duzaLiczba = 123456789012345678901234567890n;
   ```
+6. Rodzaje zapisu typu number
+### Rodzaje formatu typu number w JS
+
+- **Dziesiętny**  
+    Przykład:
+    ```js
+    let a = 123;
+    ```
+
+- **Liczba zmiennoprzecinkowa (float)**  
+    Przykład:
+    ```js
+    let b = 3.14;
+    ```
+
+- **Szesnastkowy (hexadecimal)**  
+    Przykład:
+    ```js
+    let c = 0xFF; // 255
+    ```
+
+- **Ósemkowy (octal)**  
+    Przykład:
+    ```js
+    let d = 0o77; // 63
+    ```
+
+- **Binarny (binary)**  
+    Przykład:
+    ```js
+    let e = 0b1010; // 10
+    ```
