@@ -15,4 +15,6 @@
 //pierwszy sposób
 let a = 12; //nie mozna redeklarować ale można zmieniać zawartość
 var b = 'ala'; //mozna redeklarować i można zmieniać zawartość stary sposób
+
+const c = 45; //nie mozna redeklarować i nie można zmieniać zawartości
 ```
