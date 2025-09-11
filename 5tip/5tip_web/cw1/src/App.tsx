@@ -6,6 +6,7 @@ import { useState } from 'react';
 function App() {
   const [count, setCount] = useState(10);
   const [text, setText] = useState("");
+  const [checked, setChecked] = useState(false);
 
   return (
     <>
@@ -35,6 +36,10 @@ function App() {
             <textarea value={text} onChange={(e) => setText(e.target.value)}></textarea>
             <p>{text}</p>
             <div dangerouslySetInnerHTML={{ __html: text.replace(/\n/g, "<br />") }} />
+          </section>
+          <section>
+            <input type="checkbox" checked={checked} onChange={(e) => setChecked(e.target.checked)} />
+            {checked && <input type="button" value="Przycisk" /> }
           </section>
         </main>
       </div>
