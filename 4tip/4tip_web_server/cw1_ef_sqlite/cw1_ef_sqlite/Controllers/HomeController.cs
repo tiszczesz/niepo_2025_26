@@ -14,5 +14,21 @@ namespace cw1_ef_sqlite.Controllers
             var books = _context.Books.ToList();
             return View(books);
         }
+
+        [HttpGet]
+        public IActionResult AddBook()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult AddBook(Book book)
+        {
+            if (ModelState.IsValid) {
+                _context.Books.Add(book);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View();
+        }
     }
 }
