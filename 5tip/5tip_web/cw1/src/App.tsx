@@ -7,7 +7,7 @@ function App() {
   const [count, setCount] = useState(10);
   const [text, setText] = useState("");
   const [checked, setChecked] = useState(false);
-
+  const [text2, setText2] = useState("");
   return (
     <>
       <div className="container">
@@ -16,21 +16,21 @@ function App() {
         </header>
         <main>
           <section className='row'>
-            <input 
-            value={count}
-             onChange={
-              (e)=>setCount(Number(e.target.value))
-            }
-            type="range" min={10} max={100}
+            <input
+              value={count}
+              onChange={
+                (e) => setCount(Number(e.target.value))
+              }
+              type="range" min={10} max={100}
               className="col-8" />
             <span className='col-4'>{count}</span>
           </section>
           <section>
             <div style={{
-              backgroundColor:"red",
-              width:`${count}px`,
-              height:`${count}px`,
-              }}></div>
+              backgroundColor: "red",
+              width: `${count}px`,
+              height: `${count}px`,
+            }}></div>
           </section>
           <section>
             <textarea value={text} onChange={(e) => setText(e.target.value)}></textarea>
@@ -39,8 +39,10 @@ function App() {
           </section>
           <section>
             <input type="checkbox" checked={checked} onChange={(e) => setChecked(e.target.checked)} />
-            {checked && <input type="button" value="Przycisk" /> }
+            {checked && <input type="button" value="Przycisk"
+              onClick={() => setText2("Tekst po kliknięciu przycisku")} />}
           </section>
+          <section>{text2}</section>
         </main>
       </div>
     </>
