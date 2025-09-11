@@ -18,3 +18,78 @@ var b = 'ala'; //mozna redeklarować i można zmieniać zawartość stary sposó
 
 const c = 45; //nie mozna redeklarować i nie można zmieniać zawartości
 ```
+
+6. Typy w JS
+
+- **number**  
+   Przykład:
+
+  ```js
+  let liczba = 42;
+  ```
+
+- **string**  
+   Przykład:
+
+  ```js
+  let tekst = 'Hello, world!';
+  ```
+
+- **boolean**  
+   Przykład:
+
+  ```js
+  let prawda = true;
+  let falsz = false;
+  ```
+
+- **undefined**  
+   Przykład:
+
+  ```js
+  let x;
+  // x jest undefined
+  ```
+
+- **null**  
+   Przykład:
+
+  ```js
+  let y = null;
+  ```
+
+- **object**  
+   Przykład:
+
+  ```js
+  let osoba = { imie: 'Jan', wiek: 30 };
+  ```
+
+- **array** (specjalny typ obiektu)  
+   Przykład:
+
+  ```js
+  let tablica = [1, 2, 3];
+  ```
+
+- **Function** (też obiekt)  
+   Przykład:
+
+  ```js
+  function dodaj(a, b) {
+    return a + b;
+  }
+  ```
+
+- **Symbol**  
+   Przykład:
+
+  ```js
+  let sym = Symbol('id');
+  ```
+
+- **BigInt**  
+   Przykład:
+  ```js
+  let duzaLiczba = 123456789012345678901234567890n;
+  ```
