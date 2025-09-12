@@ -24,11 +24,13 @@ namespace cw2_EF_Sqlite.Models
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Student>().HasData(
                 new Student { Id = 1, FirstName = "Jan", LastName = "Kowalski", 
-                    Group = "1A", CreatedAt = DateTime.Now },
+                    Group = "1A", CreatedAt = new DateTime(2025,2,12) },
                 new Student { Id = 2, FirstName = "Anna", LastName = "Nowak",
-                    Group = "2B", CreatedAt = DateTime.Now },
+                    Group = "2B", CreatedAt = new DateTime(2025, 4, 12)
+                },
                 new Student { Id = 3, FirstName = "Piotr", LastName = "Zieliński",
-                    Group = "1A", CreatedAt = DateTime.Now }
+                    Group = "1A", CreatedAt = new DateTime(2025, 4, 22)
+                }
             );
         }
     }
