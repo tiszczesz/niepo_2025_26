@@ -9,10 +9,7 @@ namespace cw2_EF_Sqlite.Models
 {
     public class StudentDbContext: DbContext {
         private string connString = "Data Source=students.db";
-        public StudentDbContext(string connString)
-        {
-            this.connString = connString;
-        }
+        
         //konigurujemy kontekst
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) {
             base.OnConfiguring(optionsBuilder);
