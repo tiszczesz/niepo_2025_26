@@ -1,6 +1,18 @@
 ﻿//Egzamin();
 //LoopFor();
-Power(10);
+//Power(10);
+Factorial();
+void Factorial()
+{
+    Console.Write("Podaj liczbe: ");
+    int n = Convert.ToInt32(Console.ReadLine());
+    int factorial = 1;
+    for (int i = 1; i <= n; i++)
+    {
+        factorial *= i;
+    }
+    Console.WriteLine($"Silnia z {n} wynosi {factorial}");
+}
 void Power(int howManyTimes)
 {
     for (int i = 1; i <= howManyTimes; i++)
