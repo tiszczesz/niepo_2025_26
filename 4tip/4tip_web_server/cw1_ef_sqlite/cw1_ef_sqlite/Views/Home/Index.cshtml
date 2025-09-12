@@ -18,7 +18,14 @@
             <td>@book.Title</td>
             <td>@book.Author</td>
             <td>@book.Year</td>
-            <td></td>
+            <td>
+                <a class="btn btn-danger" 
+                asp-action="DeleteBook" 
+                asp-route-id="@book.Id">Delete</a>
+                 <a class="btn btn-secondary" 
+                asp-action="UpdateBook" 
+                asp-route-id="@book.Id">Zmień</a>
+            </td>
         </tr>
     }
     </tbody>
