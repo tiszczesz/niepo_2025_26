@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cw2.css">
+    <title>Ćwiczenie 2</title>
+</head>
+
+<body class="container">
+    <h1>Ćwiczenie 2</h1>
+    <section id="result" style="color: brown;"></section>
+    <section id="result2" style="color: rgb(237, 9, 9);"></section>
+    <script>
+        const title = "Ćwiczenie 2";
+        const author = "Jan Kowalski";
+        const price = 19.99;
+        // rok szkolny 2025/2026  -->year
+        // klasa 3TIP  --> group
+        // 
+        // Wyświetlić w elemencie o id="result"
+        //znaleźć element o id="result"
+        const section = document.getElementById("result");
+        //wyświetlić w konsoli
+        console.log(section);
+        //ustawić zawartość elementu section
+        section.innerHTML = "tytuł: " + title + " autor: "
+            + author + " cena: " + price + " zł";
+    </script>
+</body>
+
+</html>
