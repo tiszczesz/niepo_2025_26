@@ -28,6 +28,7 @@ namespace Nwd.ClassLib
                       );
             a = Math.Abs(a);
             b = Math.Abs(b);
+            //petla iteracyjna
             while (b != 0) {
                 int temp = b;
                 b = a % b;
