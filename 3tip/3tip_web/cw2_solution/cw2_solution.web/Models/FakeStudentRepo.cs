@@ -16,11 +16,11 @@ public class FakeStudentRepo : IStudentRepo
     }
     public List<Student> GetAllStudents()
     {
-        throw new NotImplementedException();
+        return _students;
     }
 
-    public Student GetStudent(int id)
+    public Student? GetStudent(int id)
     {
-        throw new NotImplementedException();
+        return _students.FirstOrDefault(s => s.Id == id);
     }
 }
