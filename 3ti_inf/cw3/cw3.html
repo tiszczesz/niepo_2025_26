@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cw3.css">
+    <title>Ćwiczenie 3</title>
+</head>
+
+<body>
+    <h1>Ćwiczenie 3</h1>
+    <div id="div1">To jest div pierwszy</div>
+    <div id="div2">To jest div drugi</div>
+    <div id="div3">To jest div trzeci</div>
+    <script>
+        // pobieranie elementu o id div1
+        // querySelector - pobiera pierwszy pasujący element
+        const div1 = document.querySelector('#div1');
+        div1.style.color = 'red';
+        div1.style.textAlign = 'right';
+        //dla div2 zmienic font na pogrubiony i kolor na zielony
+        const div2 = document.querySelector('#div2');
+        div2.style.color = 'green';
+        div2.style.fontWeight = 'bold';
+        //dla div3 zmienic font na kursywe i kolor na niebieski ale po 2 sekundach
+        const div3 = document.querySelector('#div3');
+        //setTimeout(co ma zrobic, po ilu ms);
+        setTimeout(() => {
+            //to sie wykona po 2 sekundach
+            div3.style.color = 'blue';
+            div3.style.fontStyle = 'italic';
+            div1.style.backgroundColor = 'yellow';
+            div1.style.height = '100px';
+            div2.style.border = 'none';
+            div3.style.fontSize = '20px';
+        }, 2000);
+    </script>
+</body>
+
+</html>

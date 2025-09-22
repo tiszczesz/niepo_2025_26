@@ -1,0 +1,8 @@
+div {
+  border: solid 1px black;
+  padding: 20px;
+  margin: 20px;
+  background-color: rgb(210, 222, 226);
+  /* height: 40px; */
+  /* fontWeight: "bold"; js*/
+}
