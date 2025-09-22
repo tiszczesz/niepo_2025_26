@@ -16,17 +16,25 @@
         const title = "Ćwiczenie 2";
         const author = "Jan Kowalski";
         const price = 19.99;
+        const firstName = "Jan";
+        const lastName = "Kowalski";
+        const year = "  2025/2026";
+        const group = "  3TIP";
         // rok szkolny 2025/2026  -->year
         // klasa 3TIP  --> group
         // 
         // Wyświetlić w elemencie o id="result"
         //znaleźć element o id="result"
         const section = document.getElementById("result");
+        const section2 = document.getElementById("result2");
         //wyświetlić w konsoli
         console.log(section);
+        console.log(section2);
         //ustawić zawartość elementu section
         section.innerHTML = "tytuł: " + title + " autor: "
             + author + " cena: " + price + " zł";
+        section2.innerHTML = "uczeń: " + firstName + " " + lastName
+            + " rok szkolny: " + year + " klasa: " + group;
     </script>
 </body>
 
