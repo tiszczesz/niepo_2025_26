@@ -12,7 +12,7 @@ public:
 		std::cout << "Czyszczenie zasobow klasy Dog\n" ;
 	}
 	// Przesloniecie metody z klasy bazowej
-	void MakeSound() {
+	void MakeSound() override {
 		std::cout << "Hau Hau\n" ;
 	}
 	// Nowa metoda w klasie pochodnej

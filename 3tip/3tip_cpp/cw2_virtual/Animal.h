@@ -13,7 +13,7 @@ public:
 	~Animal() {
 		std::cout << "Czyszczenie zasobow klasy Animal" << std::endl;
 	}
-	void MakeSound(){
+	virtual void MakeSound(){
 		std::cout << "Dzwiek zwierzecia\n" ;
 	}
 };
