@@ -7,7 +7,7 @@
 
     // Environment Settings - for browser
     // Use native ES modules in the browser
-    "module": "es2020",
+    "module": "esnext",
     "target": "es2020",
     "lib": ["es2020", "dom"],
     "moduleResolution": "bundler",
