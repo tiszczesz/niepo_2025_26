@@ -1,0 +1,3 @@
+firstname: Jan, lastname: Kowalski
+firstname: Anna, lastname: Nowak
+firstname: Piotr, lastname: Zalewski

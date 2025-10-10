@@ -3,6 +3,7 @@ using cw3_files;
 
 Person[] people = GenerPersons();
 PrintPersons(people);
+SaveTofile("people.txt", people);
 
 
 Person[] GenerPersons()
@@ -29,3 +30,11 @@ void PrintPersons(Person[] persons)
 // Console.WriteLine(p1.GetHashCode());
 //  Console.WriteLine(p1);
 //  Console.WriteLine(p2);
+
+void SaveTofile(string filename, Person[] persons)
+{
+    foreach(var p in persons)
+    {
+        File.AppendAllText(filename, p.ToString() + Environment.NewLine);
+    }
+}
