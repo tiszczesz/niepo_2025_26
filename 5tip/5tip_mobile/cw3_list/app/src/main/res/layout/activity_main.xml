@@ -40,6 +40,8 @@
     <ListView
         android:id="@+id/listViewId"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:dividerHeight="2dp"
+        android:divider="#F44336" />
 
 </LinearLayout>
