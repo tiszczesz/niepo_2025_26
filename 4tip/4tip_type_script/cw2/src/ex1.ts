@@ -8,3 +8,4 @@ function Repeater(a: number,text:string): void {
     }
 }
 fun1();
+Repeater(3,"Ala ma kota");

@@ -10,10 +10,11 @@
     "json",
     "nodejs"
   ],
+  "type": "module",
   "author": "noname",
   "license": "ISC",
-  "type": "commonjs",
   "devDependencies": {
+    "@types/node": "^24.8.1",
     "typescript": "^5.9.3"
   }
 }

@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 function fun1() {
     const a = 5;
     console.log(`typ zmiennej a to ${typeof a} a = ${a}`);
@@ -10,4 +8,6 @@ function Repeater(a, text) {
     }
 }
 fun1();
+Repeater(3, "Ala ma kota");
+export {};
 //# sourceMappingURL=ex1.js.map
