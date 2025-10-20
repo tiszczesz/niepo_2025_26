@@ -12,7 +12,7 @@ students.forEach(
     });
 let output: string = ``;
 students.forEach(
-    (student) => {
+    (student: Student) => {
         output += `${student.firstname} - ${student.lastname}, age: ${student.age}\n`;
     });
-writeFileSync('./output.txt',output, 'utf-8');
+writeFileSync('./output.txt', output, 'utf-8');
