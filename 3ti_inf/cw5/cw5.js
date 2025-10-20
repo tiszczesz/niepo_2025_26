@@ -1,13 +1,22 @@
 //definicja funkcji
-function Result1(elem, color, text) {
+function InsertText(elem, color, text) {
     //ciało funkcji
     elem.style.backgroundColor = color; //ustawienie koloru tła
     elem.innerText = text;//ustawienie tekstu wewnątrz elementu bez znaczników HTML!!!
 }
+function GenerSelect() {
+    let html = '<select>';
+    for (let i = 1; i <= 10; i++) {
 
+    }
+}
 //wywołanie funkcji
 //szukamy elementu o id result1
 const result1Element = document.querySelector("#result1");
+const result2Element = document.querySelector("#result2");
 if (result1Element !== null) {
-    Result1(result1Element, "lightblue", "ala ma kota"); //użycie funkcji
+    InsertText(result1Element, "lightblue", "ala ma kota"); //użycie funkcji
+}
+if (result2Element !== null) {
+    InsertText(result2Element, "green", "to jest inny tekst"); //użycie funkcji
 }
