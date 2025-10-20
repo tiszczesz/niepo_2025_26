@@ -8,5 +8,11 @@ console.log(words);
 console.log(`Number of words with 3 letters: ${countWords(3, words)}`);
 students.forEach(
     (student) => {
-        console.log(`${student.firstname}  ${student.lastname}, age: ${student.age}`);
+        console.log(`${student.firstname} - ${student.lastname}, age: ${student.age}`);
     });
+let output: string = ``;
+students.forEach(
+    (student) => {
+        output += `${student.firstname} - ${student.lastname}, age: ${student.age}\n`;
+    });
+writeFileSync('./output.txt',output, 'utf-8');
