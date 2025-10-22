@@ -36,11 +36,12 @@ partial class Form1
         // button1
         // 
         button1.BackColor = Color.IndianRed;
+        button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
         button1.Location = new Point(86, 49);
         button1.Name = "button1";
         button1.Size = new Size(321, 116);
         button1.TabIndex = 0;
-        button1.Text = "button1";
+        button1.Text = "Pokaż aktualną datę";
         button1.UseVisualStyleBackColor = false;
         // 
         // label1
