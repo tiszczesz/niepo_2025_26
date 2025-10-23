@@ -28,7 +28,7 @@ function App() {
 
   function deleteBookHandler(id: number): void {
     console.log(`usuwanie książki ${id}`);
-    
+    setAllBooks(allBooks.filter(book => book.id !== id));
   }
 
   return (
