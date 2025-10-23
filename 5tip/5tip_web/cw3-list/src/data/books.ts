@@ -24,3 +24,12 @@ export const books: Book[] = [
         publishedYear: 1925
     }
 ];
+export function getMaxBookId(booksList: Book[]): number {
+    let maxId = 0;
+    for (const book of booksList) {
+        if (book.id > maxId) {
+            maxId = book.id;
+        }
+    }
+    return maxId;
+}
