@@ -19,6 +19,7 @@
 
         private void button1_Click(object sender, EventArgs e) {
             int limit = Convert.ToInt32(numUpDown.Value);
+            flowLayoutPanel1.Controls.Clear();
             for (int i = 0; i < limit; i++)
             {
                 Panel p = new Panel();
