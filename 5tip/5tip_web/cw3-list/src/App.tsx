@@ -26,6 +26,11 @@ function App() {
     setAllBooks([...allBooks, newBook]);//nowa tablica z dodaną książką
   }
 
+  function deleteBookHandler(id: number): void {
+    console.log(`usuwanie książki ${id}`);
+    
+  }
+
   return (
     <div className='container'>
       <h3>Lista książek</h3>
@@ -42,6 +47,9 @@ function App() {
               </div>
               <div className="card-text">autor: {book.author}</div>
               <div className="card-text">Rok wydania: {book.publishedYear}</div>
+            </div>
+            <div className="card-footer">
+              <button onClick={()=>deleteBookHandler(book.id)} className='btn btn-danger'>Usuń książkę</button>
             </div>
           </div>
         )
