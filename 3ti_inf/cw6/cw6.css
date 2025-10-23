@@ -1,0 +1,18 @@
+h1{
+    text-align: center;
+    border-bottom: solid gray 1px;
+    margin-bottom: 20px;
+}
+.row{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+.row span{
+    width: 60%;
+    min-height: 2em;
+    border: solid gray 1px;
+    padding: 10px;
+    text-align: center;
+    font-weight: 600;
+}
