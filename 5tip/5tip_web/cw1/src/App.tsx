@@ -1,13 +1,16 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './App.css'
-import { useState } from 'react';
+import { useState, type MouseEventHandler } from 'react';
 
 function App() {
   const [count, setCount] = useState(10);
   const [text, setText] = useState("");
   const [checked, setChecked] = useState(false);
   const [text2, setText2] = useState("");
+  const handleClick: MouseEventHandler<HTMLButtonElement> = (e) => {
+    console.log(e);    
+  }
   return (
     <>
       <div className="container">
@@ -43,6 +46,9 @@ function App() {
               onClick={() => setText2("Tekst po kliknięciu przycisku")} />}
           </section>
           <section>{text2}</section>
+          <section>
+            <button onClick={handleClick}>Testowy</button>
+          </section>
         </main>
       </div>
     </>
