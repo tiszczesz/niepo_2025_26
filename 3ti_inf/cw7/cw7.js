@@ -14,5 +14,6 @@ btnCreate.onclick = function () {
         numbers.push(Math.floor(Math.random() * 100));//[0-99]
     }
     console.log(numbers);
+    //wyświetlenie wyniku na stronie
     result.innerHTML = "Wylosowano liczby: " + numbers.join(" ");
 };
