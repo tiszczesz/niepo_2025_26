@@ -3,7 +3,9 @@ type Props = {}
 
 const About = (props: Props) => {
   return (
-    <div>About</div>
+    <div>
+        <img src="react.png" alt="logo" />
+    </div>
   )
 }
 
