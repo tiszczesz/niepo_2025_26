@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cw1 - upload file</title>
+</head>
+
+<body>
+    <h1>Przesyłanie plików</h1>
+    <form action="cw1_upload.php" method="post" 
+        enctype="multipart/form-data">
+        <label for="fileUpload">
+            Wybierz plik do przesłania:
+        </label>
+        <input type="file" name="fileUpload" id="fileUpload">
+        <input type="submit" value="Prześlij plik">
+    </form>
+</body>
+
+</html>
