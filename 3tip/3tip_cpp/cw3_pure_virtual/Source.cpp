@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 #include "File.h"
+#include "FileText.h"
 using namespace std;
 void Pointers() {
 	//if (true) {
@@ -25,5 +26,6 @@ void Pointers() {
 }
 int main() {
 	//Pointers();
+	FileText ft1;
 	return 0;
 }

@@ -19,13 +19,14 @@ public:
 			<< "Utworzenie obiektu File (z argumentami konstruktor)"
 			<< std::endl;
 	}
-	virtual void ShowInfo(){
+	virtual void ShowInfo() { //moge nadpisac lub nie
 		std::cout
 			<< "Sciezka: " << path
 			<< ", rozmiar: " << size
 			<< std::endl;
 	}
 	//metoda czysto wirtualna nie ma implementacji!!!!
+	//musi byc nadpisana w klasach pochodnych (nie abstrakcyjnych)
 	virtual void ShowContent() = 0; // metoda czysto wirtualna
 
 	virtual ~File() {
