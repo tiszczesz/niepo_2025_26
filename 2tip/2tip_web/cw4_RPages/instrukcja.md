@@ -27,3 +27,7 @@ b. Pages
 
 4. Dodajemy Stronę RazorPage Index
  wybieramy add file RazorPage w katalogu Pages
+
+ 5. Nową stronę dodajemy analogicznie w katalogu Pages
+
+ 6. Aby działały tagi asp-... to trzeba dodać do Pages plik _ViewImports

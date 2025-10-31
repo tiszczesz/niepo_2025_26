@@ -6,8 +6,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Second page</title>
+    <style>
+     td,th {
+        padding: 8px;        
+     }
+    </style>
 </head>
 <body>
-    
+    <h1>Model w pliku Second.cshtml.cs</h1>
+    <table border="1" style="border-collapse:collapse;width:50%;">
+        <tr style="background-color:lightgreen;">
+            <th>Imię</th>
+            <th>Nazwisko</th>
+            <th>Wiek</th>
+        </tr>
+        @foreach( Person person in Model.Persons){
+            <tr>
+                <td>@person.FirstName</td>
+                <td>@person.LastName</td>
+                <td>@person.Age</td>
+            </tr>
+        }
+    </table>
 </body>
 </html>
