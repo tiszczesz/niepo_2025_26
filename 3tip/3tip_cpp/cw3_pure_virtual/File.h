@@ -19,9 +19,23 @@ public:
 			<< "Utworzenie obiektu File (z argumentami konstruktor)"
 			<< std::endl;
 	}
+	virtual void ShowInfo(){
+		std::cout
+			<< "Sciezka: " << path
+			<< ", rozmiar: " << size
+			<< std::endl;
+	}
+	//metoda czysto wirtualna nie ma implementacji!!!!
+	virtual void ShowContent() = 0; // metoda czysto wirtualna
+
 	virtual ~File() {
 		std::cout
 			<< "Usuniecie obiektu File"
+			<< std::endl;
+	}
+	void NoVirtual() {
+		std::cout
+			<< "Metoda nie wirtualna z klasy File"
 			<< std::endl;
 	}
 };
