@@ -13,6 +13,7 @@ async function main() {
     //tutaj mozna uzyc await
     //to jest podobne do cin w c++
     const firstname:string = await rl.question("Podaj imie: ");
+    rl.close();
     console.log(`Witaj, ${firstname}!`);
 }
 //wywolujemy funkcje main
