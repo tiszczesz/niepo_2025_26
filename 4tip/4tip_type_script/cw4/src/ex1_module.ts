@@ -1,0 +1,1 @@
+export const a = "Hello from ex1_module.ts";
