@@ -12,14 +12,27 @@
             <GradientStop Color="#FFDA9797" Offset="1"/>
         </LinearGradientBrush>
     </Window.Background>
-    <Grid RenderTransformOrigin="0.486,0.141" >
-        <Grid.RowDefinitions>
-            <RowDefinition Height="87*"/>
-            <RowDefinition Height="124*"/>
-            <RowDefinition Height="73*"/>
-        </Grid.RowDefinitions>
-        <Button Height="50" Margin="0,30,0,44" Grid.Row="1">ala ma kota</Button>
-        <Button Height="50" Margin="0,23,0,0" Grid.Row="2">ala ma kota</Button>
-        <Button Height="40" Margin="0,19,0,28">ala ma kota</Button>
-    </Grid>
+    <StackPanel Orientation="Vertical">
+        <TextBox 
+            TextAlignment="Center"
+            FontSize="20"
+            FontWeight="Bold"
+            Foreground="DarkBlue"
+            Padding="10"
+            Background="Azure"
+            >To jest pierwsza aplikacja w WPF</TextBox>
+        <StackPanel Orientation="Horizontal"
+                    Margin="20 10">
+            <Button 
+                x:Name="btnOther" 
+                Margin="10" Click="btnOther_Click">Pokaż datę</Button>
+            <Button Padding="10" 
+                    x:Name="btnClose" Margin="10" 
+                    Click="BtnClose_OnClick"
+                    FontWeight="Bold">Zamknij</Button>
+            <TextBox x:Name="dateInfo" Width="300" FontSize="24" Padding="10"
+                     TextAlignment="Center" Foreground="DarkRed"
+                     FontWeight="Bold">Tu będzie data</TextBox>
+        </StackPanel>
+    </StackPanel>
 </Window>

@@ -19,6 +19,17 @@ namespace cw1_wpf
         public MainWindow()
         {
             InitializeComponent();
+            
+        }
+
+        private void BtnClose_OnClick(object sender, RoutedEventArgs e) {
+            Close();
+        }
+
+        private void btnOther_Click(object sender, RoutedEventArgs e)
+        {
+            string date = DateTime.Now.ToShortDateString();
+            dateInfo.Text = date;
         }
     }
 }
