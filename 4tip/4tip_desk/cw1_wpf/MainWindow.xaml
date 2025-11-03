@@ -34,5 +34,7 @@
                      TextAlignment="Center" Foreground="DarkRed"
                      FontWeight="Bold">Tu będzie data</TextBox>
         </StackPanel>
+        <Button>df gdf gdf gd gd</Button>
+        
     </StackPanel>
 </Window>
