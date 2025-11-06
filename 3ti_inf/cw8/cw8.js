@@ -6,18 +6,21 @@ const colors = [ //tworzenie tablicy z kolorami
     "green",
     "yellow",
     "purple",
+    "gray",
+    "pink",
+    "orange"
 ]
 //funkcja generująca select z opcjami kolorów
 function generateColorSelect(elem) {
-    let html  = '<select id="colorSelect">'; //tworzenie elementu select z id colorSelect
+    let html = '<select id="colorSelect">'; //tworzenie elementu select z id colorSelect
     //iteracja po tablicy colors w celu wygenerowania wszystkich opcji
-    for(let i=0; i<colors.length;i++){
+    for (let i = 0; i < colors.length; i++) {
         html += '<option value="' + colors[i] + '">' //<option value="red">
-               + colors[i] + '</option>'; //dodanie opcji do selecta
+            + colors[i] + '</option>'; //dodanie opcji do selecta
     }
     html += '</select>'; //zamknięcie elementu select
     elem.innerHTML = html; //wstawienie wygenerowanego selecta do elementu przekazanego
-                        // jako argument
+    // jako argument
 }
 function changeBackgroundColor() {
     const select = document.querySelector('#colorSelect'); //pobranie elementu select
@@ -27,6 +30,6 @@ function changeBackgroundColor() {
 //za funkcja
 const first = document.querySelector('#first'); //pobranie elementu o id first
 generateColorSelect(first); //wywołanie funkcji generującej select z kolorami 
-                            // i wstawienie go do elementu first
+// i wstawienie go do elementu first
 const select = document.querySelector('#colorSelect');
 select.onchange = changeBackgroundColor; //ustawienie obsługi zdarzenia onchange
