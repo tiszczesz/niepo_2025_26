@@ -1,33 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
+import MySelect from './components/MySelect';
+import { useState } from 'react';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [selectedOption, setSelectedOption] = useState<string>("");
+
+  function handleSelectChange(value: string): void {
+    console.log("Wybrano poziom wykształcenia: ", value);
+    setSelectedOption(value);
+  }
+  function handleSelectChange2(value: string): void {
+    console.log("Wybrano status zawodowy: ", value);
+    //setSelectedOption(value);
+  }
+  function changeColor(value: string): void {
+    document.body.style.backgroundColor = value;
+  }
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h1>Komponenty</h1>
+      <MySelect
+        options={["podstawowe", "średnie", "wyższe", "inne"]}
+        title="Wybierz poziom wykształcenia:"
+        handleOnChange={(value => handleSelectChange(value))}
+      />
+      <MySelect
+        options={["uczeń", "student", "pracownik", "emeryt"]}
+        title="Wybierz status zawodowy:"
+        handleOnChange={(value => handleSelectChange2(value))}
+      />
+      <MySelect options={["white", "green", "blue", "yellow"]}
+        title="Wybierz kolor:" handleOnChange={(value) => changeColor(value)} />
+      <p>Wybrano: {selectedOption}</p>
     </>
   )
 }
