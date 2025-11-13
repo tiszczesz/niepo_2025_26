@@ -27,6 +27,14 @@ function changeBackgroundColor() {
     const selectedColor = select.value; //pobranie wybranego koloru
     document.body.style.backgroundColor = selectedColor; //zmiana koloru tła strony
 }
+document.querySelector('#font-size-select').onchange = function () {
+    console.log('zmiana rozmiaru czcionki'); //logowanie zmiany rozmiaru czcionki
+
+    const fontSize = this.value; //pobranie wybranego rozmiaru czcionki
+    console.log(fontSize);
+    // debugger;
+    document.querySelector('#toChangeSize').style.fontSize = fontSize; //zmiana rozmiaru czcionki
+}
 //za funkcja
 const first = document.querySelector('#first'); //pobranie elementu o id first
 generateColorSelect(first); //wywołanie funkcji generującej select z kolorami 
