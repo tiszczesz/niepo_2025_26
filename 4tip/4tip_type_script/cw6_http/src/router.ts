@@ -1,5 +1,6 @@
 import type { IncomingMessage, ServerResponse } from "node:http";
 import {type Book, books} from './data/my-books.js';
+import { readFileSync } from "node:fs";
 
 export const handleRoutes = (req: IncomingMessage, res: ServerResponse) => { 
     if(req.url === '/' && req.method === 'GET'){
@@ -14,6 +15,11 @@ export const handleRoutes = (req: IncomingMessage, res: ServerResponse) => {
         res.statusCode = 200;
         res.setHeader('Content-Type', 'application/json');
         return res.end(JSON.stringify(books));
+    }else if(req.url==='/index'){
+        res.statusCode = 200;
+        res.setHeader('Content-Type', 'text/html');
+        const html = readFileSync('./public/index.html', 'utf-8');
+        return res.end(html);
     }
     
     else{
