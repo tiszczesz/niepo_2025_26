@@ -1,0 +1,99 @@
+﻿# Visual Studio 2022 - common ignores for C++ projects
+
+## User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## Visual Studio folders
+.vs/
+.vscode/
+
+## Build results
+[Bb]in/
+[Oo]bj/
+Debug/
+Release/
+x64/Debug/
+x64/Release/
+x86/Debug/
+x86/Release/
+ARM/Debug/
+ARM/Release/
+build/
+out/
+artifacts/
+TestResults/
+
+## Visual C++ intermediate / output
+*.obj
+*.o
+*.lib
+*.dll
+*.exe
+*.exp
+*.pdb
+*.ipdb
+*.ilk
+*.idb
+*.class
+*.lo
+*.so
+*.a
+*.dylib
+
+## Visual C++ database / indexing
+ipch/
+*.tlog
+*.lastbuildstate
+*.ncb
+*.sdf
+*.opensdf
+*.VC.db
+*.VC.opendb
+
+## CMake generated files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+CTestTestfile.cmake
+
+## NuGet
+packages/
+*.nupkg
+project.lock.json
+project.fragment.lock.json
+
+## vcpkg
+vcpkg_installed/
+installed/
+buildtrees/
+packages/*/buildtrees/
+
+## Rider / JetBrains
+.idea/
+
+## Other IDEs / editors
+*.code-workspace
+
+## Logs and temporary files
+*.log
+*.tmp
+*.temp
+
+## OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.~lock.*
+
+## Packaging outputs
+*.zip
+*.tar.gz
+*.7z
+
+# Keep repository files and sources (do not ignore these patterns):
+# - Do not ignore C++ source/headers (.cpp, .h, .hpp)
+# - Do not ignore project files (.vcxproj, .sln) unless you intentionally want to
