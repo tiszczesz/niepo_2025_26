@@ -28,22 +28,11 @@
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime cumque, deserunt nesciunt aliquam rem ut mollitia
         quidem delectus modi eos vel consequuntur molestiae commodi magni. At quas nobis ducimus deleniti.</p>
     <div id="result"></div>
-    <script>
-        const contacts = [
-            { name: "Alice", phone: "123-456-7890" },
-            { name: "Bob", phone: "987-654-3210" },
-            { name: "Charlie", phone: "555-555-5555" }
-        ];
-        const select = document.createElement('select');
-        select.id = 'contactSelect';
-        for (const c of contacts) {
-            const option = document.createElement('option');
-            option.value = c.phone;
-            option.textContent = `${c.name} (${c.phone})`;//innnText, innerHTML, textContent
-            select.appendChild(option);
-        }
-        document.getElementById('result').appendChild(select);
-    </script>
+    <div>
+        <img src="public/node.png" alt="obrazek node.js">
+    </div>
+    <script src="public/index.js" defer></script>
+
 </body>
 
 </html>
