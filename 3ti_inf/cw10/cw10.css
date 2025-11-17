@@ -1,18 +1,23 @@
-.border{
-    border: 2px solid black;
-    padding: 10px;
-    font-size: 1.5em;
+.border {
+  border: 2px solid black;
+  padding: 10px;
+  font-size: 1.5em;
 }
-.underline{
-    text-decoration: underline;
-    color: blue;
+.underline {
+  text-decoration: underline;
+  color: blue;
 }
-.red{
-    color: red;
-    font-weight: bold;
+.red {
+  color: red;
+  font-weight: bold;
 }
-.center{
-    margin: auto;
-    text-align: center;
-    font-size: 2em;
+.center {
+  margin: auto;
+  text-align: center;
+  font-size: 2em;
+}
+#first,
+#second,
+#third {
+  cursor: pointer;
 }
