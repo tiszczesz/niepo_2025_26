@@ -32,11 +32,12 @@
             btnSend = new Button();
             checkBox1 = new CheckBox();
             cbClassname = new ComboBox();
-            tbLasname = new TextBox();
+            tbLastname = new TextBox();
             tbFirstname = new TextBox();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
+            lbResult = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -47,7 +48,7 @@
             panel1.Controls.Add(btnSend);
             panel1.Controls.Add(checkBox1);
             panel1.Controls.Add(cbClassname);
-            panel1.Controls.Add(tbLasname);
+            panel1.Controls.Add(tbLastname);
             panel1.Controls.Add(tbFirstname);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(label2);
@@ -68,6 +69,7 @@
             btnSend.TabIndex = 7;
             btnSend.Text = "Zatwierdź dane";
             btnSend.UseVisualStyleBackColor = false;
+            btnSend.Click += btnSend_Click;
             // 
             // checkBox1
             // 
@@ -90,13 +92,13 @@
             cbClassname.Size = new Size(233, 29);
             cbClassname.TabIndex = 5;
             // 
-            // tbLasname
+            // tbLastname
             // 
-            tbLasname.Font = new Font("Segoe UI", 12F);
-            tbLasname.Location = new Point(182, 105);
-            tbLasname.Name = "tbLasname";
-            tbLasname.Size = new Size(233, 29);
-            tbLasname.TabIndex = 4;
+            tbLastname.Font = new Font("Segoe UI", 12F);
+            tbLastname.Location = new Point(182, 105);
+            tbLastname.Name = "tbLastname";
+            tbLastname.Size = new Size(233, 29);
+            tbLastname.TabIndex = 4;
             // 
             // tbFirstname
             // 
@@ -136,11 +138,22 @@
             label1.TabIndex = 0;
             label1.Text = "Podaj imię:";
             // 
+            // lbResult
+            // 
+            lbResult.AutoSize = true;
+            lbResult.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            lbResult.Location = new Point(538, 49);
+            lbResult.Name = "lbResult";
+            lbResult.Size = new Size(63, 25);
+            lbResult.TabIndex = 1;
+            lbResult.Text = "label4";
+            // 
             // MainWindow
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(lbResult);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
@@ -149,18 +162,20 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Panel panel1;
         private ComboBox cbClassname;
-        private TextBox tbLasname;
+        private TextBox tbLastname;
         private TextBox tbFirstname;
         private Label label3;
         private Label label2;
         private Label label1;
         private Button btnSend;
         private CheckBox checkBox1;
+        private Label lbResult;
     }
 }
