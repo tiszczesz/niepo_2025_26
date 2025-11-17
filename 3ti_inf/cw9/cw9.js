@@ -13,6 +13,11 @@ document.querySelector('#confirm-button').onclick = function () {
     }
 }
 document.querySelector('#prompt-button').onclick = function () {
-    var name = prompt('Jak masz na imię?');
+    const name = prompt('Jak masz na imię?');
     console.log(name);
+    if(name && name.trim() !== '') {  //czy nie null i czy nie pusty string
+        document.querySelector('#result-prompt').innerHTML = `Cześć, ${name.trim()}!`;
+    } else { //jeśli null lub pusty string
+        document.querySelector('#result-prompt').innerHTML = 'Cześć, nieznajomy!';
+    }
 }
