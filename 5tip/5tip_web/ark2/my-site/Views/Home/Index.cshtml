@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@model List<my_site.Models.Course>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,6 +9,11 @@
 </head>
 <body>
     <h1>To jest strona Index</h1>
-
+    <ul>
+    @foreach(var course in Model){
+        <li>@course.CourseName - @course.Price zł 
+        - Max osób: @course.MaxMembers</li>
+    }
+    </ul>
 </body>
 </html>
