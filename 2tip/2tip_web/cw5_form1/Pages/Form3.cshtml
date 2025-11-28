@@ -1,0 +1,27 @@
+﻿@page
+@model cw5_form1.Pages.Form3Model
+@{
+}
+<h1>Formularz 3 metoda post</h1>
+<div class="alert alert-danger" role="alert" style="display: none;">
+    Zaakceptuj regulamin aby móc wysłać formularz
+</div>
+<form id="form3" asp-page="Form3" method="post">
+    <input type="text" placeholder="Podaj użytkownika" name="user"> <br />
+    wybierz rolę:
+    <select name="role">
+        <option value="Administrator">Administrator</option>
+        <option value="Moderator">Moderator</option>
+        <option value="User">Użytkownik</option>
+    </select><br />
+    Zaakceptuj regulamin:
+    <input id="agree" type="checkbox" name="regulamin" value="accepted"> Akceptuję regulamin <br />
+    <input type="submit" value="Wyślij">
+</form>
+<hr>
+@if (ViewData["Info"] != null && (bool)ViewData["Info"] == true)
+{
+
+    <p>Użytkownik: @Model.MyUser?.Username</p>
+    <p>Rola: @Model.MyUser?.Role</p>
+}
