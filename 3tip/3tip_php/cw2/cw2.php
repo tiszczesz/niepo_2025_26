@@ -14,6 +14,7 @@ setcookie("test_cookie", "test");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <title>Ćwiczenie 2 - cookies</title>
 </head>
 
@@ -35,6 +36,16 @@ setcookie("test_cookie", "test");
     // var_dump($_COOKIE);
     //setcookie($cookies_name, "", time() - 3600); // usuwanie ciasteczka
     ?>
+
+    <main>
+        <h3>Tabelka</h3>
+        <?php
+        require_once "functions.php";
+        $students = GetAllStudents();
+        echo StudentsToTable($students);
+        ?>
+    </main>
+    <script src="script.js" defer></script>
 </body>
 
 </html>
