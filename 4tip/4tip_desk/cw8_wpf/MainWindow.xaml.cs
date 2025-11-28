@@ -34,7 +34,7 @@ namespace cw8_wpf
         {
             InitializeComponent();
             DataContext = this;// Set the data context for data binding
-            BoundNumber = 67;
+            BoundNumber = 45;
         }
 
         public event PropertyChangedEventHandler? PropertyChanged;
