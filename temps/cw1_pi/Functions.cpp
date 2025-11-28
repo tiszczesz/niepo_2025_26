@@ -1,4 +1,4 @@
-
+﻿#include <cmath>
 #include <cstdlib>
 
 double GenerPi(unsigned steps) {
@@ -7,7 +7,7 @@ double GenerPi(unsigned steps) {
 	for (unsigned i = 0; i < steps; ++i) {
 		double x = static_cast<double>(rand()) / RAND_MAX;
 		double y = static_cast<double>(rand()) / RAND_MAX;
-		if (x * x + y * y <= 1.0) {
+		if (sqrt(x * x + y * y) <= 1.0) {
 			inside += 1.0;
 		}
 	}
