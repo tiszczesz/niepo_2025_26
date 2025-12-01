@@ -34,9 +34,9 @@
             btnAddItem = new Button();
             tbAddItem = new TextBox();
             panel2 = new Panel();
-            button4 = new Button();
-            button3 = new Button();
-            button2 = new Button();
+            btnDeleteItem = new Button();
+            btnInsertItem = new Button();
+            btnFirstItem = new Button();
             btnClear = new Button();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
@@ -97,9 +97,9 @@
             // panel2
             // 
             panel2.BackColor = SystemColors.ActiveCaption;
-            panel2.Controls.Add(button4);
-            panel2.Controls.Add(button3);
-            panel2.Controls.Add(button2);
+            panel2.Controls.Add(btnDeleteItem);
+            panel2.Controls.Add(btnInsertItem);
+            panel2.Controls.Add(btnFirstItem);
             panel2.Controls.Add(btnClear);
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(308, 0);
@@ -107,32 +107,34 @@
             panel2.Size = new Size(399, 449);
             panel2.TabIndex = 1;
             // 
-            // button4
+            // btnDeleteItem
             // 
-            button4.Location = new Point(39, 149);
-            button4.Name = "button4";
-            button4.Size = new Size(331, 38);
-            button4.TabIndex = 3;
-            button4.Text = "button4";
-            button4.UseVisualStyleBackColor = true;
+            btnDeleteItem.Enabled = false;
+            btnDeleteItem.Location = new Point(39, 149);
+            btnDeleteItem.Name = "btnDeleteItem";
+            btnDeleteItem.Size = new Size(331, 38);
+            btnDeleteItem.TabIndex = 3;
+            btnDeleteItem.Text = "Usuń zazanaczony element";
+            btnDeleteItem.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnInsertItem
             // 
-            button3.Location = new Point(39, 107);
-            button3.Name = "button3";
-            button3.Size = new Size(331, 38);
-            button3.TabIndex = 2;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = true;
+            btnInsertItem.Enabled = false;
+            btnInsertItem.Location = new Point(39, 107);
+            btnInsertItem.Name = "btnInsertItem";
+            btnInsertItem.Size = new Size(331, 38);
+            btnInsertItem.TabIndex = 2;
+            btnInsertItem.Text = "Wstaw w wybrane miejsce";
+            btnInsertItem.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnFirstItem
             // 
-            button2.Location = new Point(39, 65);
-            button2.Name = "button2";
-            button2.Size = new Size(331, 38);
-            button2.TabIndex = 1;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            btnFirstItem.Location = new Point(39, 65);
+            btnFirstItem.Name = "btnFirstItem";
+            btnFirstItem.Size = new Size(331, 38);
+            btnFirstItem.TabIndex = 1;
+            btnFirstItem.Text = "Dodaj na początek";
+            btnFirstItem.UseVisualStyleBackColor = true;
             // 
             // btnClear
             // 
@@ -168,9 +170,9 @@
         private Panel panel2;
         private Button btnAddItem;
         private TextBox tbAddItem;
-        private Button button4;
-        private Button button3;
-        private Button button2;
+        private Button btnDeleteItem;
+        private Button btnInsertItem;
+        private Button btnFirstItem;
         private Button btnClear;
     }
 }
