@@ -19,6 +19,16 @@ const contacts = [
         name: "David Wilson",
         email: "david.wilson@example.com"
     },
+    {
+        id: 5,
+        name: "Eva Green",
+        email: "eva.green@example.com"
+    },
+    {
+        id: 6,
+        name: "Eva Green tttttt",
+        email: "eva.green@example.com"
+    }
 ];
 const left = document.querySelector('#left');
 const table = document.createElement('table');
@@ -29,9 +39,9 @@ headerRow.innerHTML = `<th>Lp.</th>
                       <th>Email</th>`;
 thead.appendChild(headerRow);
 const tbody = table.appendChild(document.createElement('tbody'));
-for(let i=0; i<contacts.length;i++){
+for (let i = 0; i < contacts.length; i++) {
     const row = document.createElement('tr');
-    row.innerHTML = `<td>${i+1}</td>
+    row.innerHTML = `<td>${i + 1}</td>
                         <td>${contacts[i].name}</td>
                         <td>${contacts[i].email}</td>`;
     tbody.appendChild(row);
