@@ -6,6 +6,9 @@ type FormResult = {
     age: number;
     item: string;
 }
+const options = [
+    "dsdssd","dfdfdf","fdfdfd","gfgfgf"
+];
 
 
 const MyFormAction = () => {
@@ -32,9 +35,9 @@ const MyFormAction = () => {
                 <input type="date" name="myDate" />
                 <input type="number" name="age" placeholder="Podaj wiek" />
                 <select name="items">
-                    <option value="item1">Item 1</option>
-                    <option value="item2">Item 2</option>
-                    <option value="item3">Item 3</option>
+                    {options.map((opt, index) => (
+                        <option key={index} value={opt}>{opt}</option>
+                    ))}
                 </select>
                 <button type="submit">Wyślij</button>
             </form>
