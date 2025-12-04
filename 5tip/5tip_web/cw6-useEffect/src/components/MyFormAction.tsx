@@ -14,6 +14,7 @@ const options = [
 const MyFormAction = () => {
     console.log("Render MyFormAction");
     const [formResult, setFormResult] = useState<FormResult | null>(null);
+    const [ishow, setIsHow] = useState(true);
     const handleFormSubmit = (formData: FormData) => {
         console.log(formData);
         //cała logika obsługi formularza tutaj
@@ -28,7 +29,7 @@ const MyFormAction = () => {
     }
     return (
         <div>
-            <form action={handleFormSubmit}>
+            <form action={handleFormSubmit} >
                 <div>Formularz z akcją</div>
                 <input type="text" name="firstName" placeholder="Imię" />
                 <input type="text" name="lastName" placeholder="Nazwisko" />
@@ -48,6 +49,8 @@ const MyFormAction = () => {
                     <pre>{JSON.stringify(formResult, null, 2)}</pre>
                 )}
             </div>
+            <button onClick={() => setIsHow(!ishow)}>Pokaż/Ukryj sekret</button>
+            {ishow &&<div>SECRET</div>}
         </div>
     )
 }
