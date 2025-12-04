@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "CppUnitTest.h"
-#include "../ConsoleApplication1/ConsoleApplication1.cpp"
+#include "../ConsoleApplication1/Person.h"
+#include "../ConsoleApplication1/Person.cpp"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
