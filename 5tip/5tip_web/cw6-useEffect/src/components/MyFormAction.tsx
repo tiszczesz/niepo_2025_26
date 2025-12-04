@@ -7,9 +7,8 @@ type FormResult = {
     item: string;
 }
 
-type Props = {}
 
-const MyFormAction = (props: Props) => {
+const MyFormAction = () => {
     const [formResult, setFormResult] = useState<FormResult | null>(null);
     const handleFormSubmit = (formData: FormData) => {
         console.log(formData);
@@ -33,6 +32,9 @@ const MyFormAction = (props: Props) => {
             <hr />
             <div>
                 <h3>Result formularza</h3>
+                {formResult && (
+                    <pre>{JSON.stringify(formResult, null, 2)}</pre>
+                )}
             </div>
         </div>
     )
