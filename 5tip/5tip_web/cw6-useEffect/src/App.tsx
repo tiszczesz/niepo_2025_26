@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 import MyTimer from './components/MyTimer';
+import MyFocused from './components/MyFocused';
 
 function App() {
 
@@ -10,6 +11,8 @@ function App() {
       <main className='container'>
         <h1>Hello</h1>
         <MyTimer />
+        <hr />
+        <MyFocused />
       </main>
     </>
   )
