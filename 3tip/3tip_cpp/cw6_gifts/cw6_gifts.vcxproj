@@ -127,10 +127,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Functions.cpp" />
     <ClCompile Include="source.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cloth.h" />
+    <ClInclude Include="Functions.h" />
     <ClInclude Include="Gift.h" />
     <ClInclude Include="SizeEnum.h" />
   </ItemGroup>

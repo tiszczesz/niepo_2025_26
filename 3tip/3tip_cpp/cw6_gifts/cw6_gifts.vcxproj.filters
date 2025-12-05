@@ -18,6 +18,9 @@
     <ClCompile Include="source.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Gift.h">
@@ -27,6 +30,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SizeEnum.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Functions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
