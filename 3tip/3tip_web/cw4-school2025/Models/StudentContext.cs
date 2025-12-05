@@ -15,6 +15,31 @@ public class StudentContext: DbContext
         base.OnModelCreating(modelBuilder);
         //modelBuilder.Entity<Student>().ToTable("Student");
         //wstepne dane do tabelki Students
-        modelBuilder.Entity<Student>().HasData();
+        modelBuilder.Entity<Student>().HasData(
+            new Student
+            {
+                Id = 1,
+                FirstName = "Jan",
+                LastName = "Kowalski",
+                BirthDate = new DateTime(1995, 05, 12),
+                EctsPoints = 30
+            },
+            new Student
+            {
+                Id = 2,
+                FirstName = "Anna",
+                LastName = "Malewska",
+                BirthDate = new DateTime(1996, 03, 22),
+                EctsPoints = 12
+            },
+            new Student
+            {
+                Id = 3,
+                FirstName = "Piotr",
+                LastName = "Zalewski",
+                BirthDate = new DateTime(1994, 11, 02),
+                EctsPoints = 45
+            }
+        );
     }
 }
