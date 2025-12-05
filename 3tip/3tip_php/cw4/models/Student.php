@@ -1,20 +1,19 @@
 <?php
 class Student extends Person
 {
-    protected string $studentId;
-    protected float $gAvg;
+
     public function __construct(
-        string $firstName = '',
-        string $lastName = '',
-        int $age = 0,
-        string $studentId = '',
-        float $gAvg = 0.0
+        protected string $firstName = '',
+        protected string $lastName = '',
+        protected int $age = 0,
+        protected string $studentId = '',
+        protected float $gAvg = 10.0
     ) {
         // Wywołanie konstruktora klasy bazowej (Person) ustawia właściwości odziedziczone
         parent::__construct($firstName, $lastName, $age);
         // Ustawienie właściwości specyficznych dla Student
-        $this->studentId = $studentId;
-        $this->gAvg = $gAvg;
+        // $this->studentId = $studentId;
+        // $this->gAvg = 67;
     }
     public function getStudentId(): string
     {

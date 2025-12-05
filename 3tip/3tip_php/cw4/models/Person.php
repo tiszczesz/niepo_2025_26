@@ -1,14 +1,11 @@
 <?php
 class Person
-{
-    protected string $firstName;
-    protected string $lastName;
-    protected int $age;
-    public function __construct(string $firstName = '', string $lastName = '', int $age = 0)
+{  // Właściwości klasy Person automatycznie zdefiniowane w konstruktorze
+    public function __construct(
+        protected string $firstName = '',
+        protected string $lastName = '',
+        protected int $age = 0)
     {
-        $this->firstName = $firstName;
-        $this->lastName = $lastName;
-        $this->age = $age;
     }
     public function getFirstName(): string
     {
