@@ -23,6 +23,7 @@ namespace egzamin1.Controllers
             if (ModelState.IsValid)
             {
                 // Tutaj dodaj logikę zapisywania użytkownika do bazy danych
+                _usersRepo.AddUser(user);
                 return RedirectToAction(nameof(GetAll));
             }
             return View(user);
