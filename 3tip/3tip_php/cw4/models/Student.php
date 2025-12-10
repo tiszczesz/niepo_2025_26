@@ -3,6 +3,7 @@ class Student extends Person
 {
 
     public function __construct(
+        protected int $id = -1,
         protected string $firstName = '',
         protected string $lastName = '',
         protected int $age = 0,
@@ -10,7 +11,7 @@ class Student extends Person
         protected float $gAvg = 10.0
     ) {
         // Wywołanie konstruktora klasy bazowej (Person) ustawia właściwości odziedziczone
-        parent::__construct($firstName, $lastName, $age);
+        parent::__construct($id,$firstName, $lastName, $age);
         // Ustawienie właściwości specyficznych dla Student
         // $this->studentId = $studentId;
         // $this->gAvg = 67;
