@@ -36,11 +36,10 @@ public class UsersRepo
         //     "INSERT INTO Users (UserName, Email, CreatedAt)"
         //     +$" VALUES ('{user.UserName}', '{user.Email}', '{user.CreatedAt}')";
         cmd.CommandText = 
-        "INSERT INTO Users (UserName, Email, CreatedAt)"
-          +" VALUES (@UserName, @Email, @CreatedAt)";
+        "INSERT INTO Users (UserName, Email)"
+          +" VALUES (@UserName, @Email)";
         cmd.Parameters.AddWithValue("@UserName", user.UserName);
         cmd.Parameters.AddWithValue("@Email", user.Email);
-        cmd.Parameters.AddWithValue("@CreatedAt", user.CreatedAt);
         conn.Open();
         cmd.ExecuteNonQuery();
         conn.Close();
