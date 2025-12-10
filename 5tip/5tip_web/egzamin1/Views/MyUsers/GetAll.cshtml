@@ -1,0 +1,31 @@
+﻿@model List<User>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/site.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Lista użytkowników</h2>
+    <table>
+        <tr>
+            <th>Nazwa użytkownika</th>
+            <th>Email użytkownika</th>
+            <th>Data utworzenia</th>
+        </tr>
+        @foreach (User user in Model)
+        {
+            <tr>
+                <td>@user.UserName</td>
+                <td>@user.Email</td>
+                <td>@user.CreatedAt.ToShortDateString()</td>
+            </tr>
+        }
+    </table>
+</body>
+
+</html>
