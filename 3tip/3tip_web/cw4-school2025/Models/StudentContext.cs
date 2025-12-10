@@ -42,7 +42,7 @@ public class StudentContext: DbContext
                 EctsPoints = 45
             }
         );
-        modelBuilder.Entity<Teacher>().HasData();
+        modelBuilder.Entity<Teacher>().HasData(
             new Teacher
             {
                 Id = 1,
