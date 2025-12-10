@@ -28,4 +28,21 @@ public class UsersRepo
         conn.Close();
         return users;
     }
+    public void AddUser(User user)
+    {
+        using SqliteConnection conn = new SqliteConnection(_connectionString);
+        using SqliteCommand cmd = conn.CreateCommand();
+        //    cmd.CommandText = 
+        //     "INSERT INTO Users (UserName, Email, CreatedAt)"
+        //     +$" VALUES ('{user.UserName}', '{user.Email}', '{user.CreatedAt}')";
+        cmd.CommandText = 
+        "INSERT INTO Users (UserName, Email, CreatedAt)"
+          +" VALUES (@UserName, @Email, @CreatedAt)";
+        cmd.Parameters.AddWithValue("@UserName", user.UserName);
+        cmd.Parameters.AddWithValue("@Email", user.Email);
+        cmd.Parameters.AddWithValue("@CreatedAt", user.CreatedAt);
+        conn.Open();
+        cmd.ExecuteNonQuery();
+        conn.Close();
+    }
 }
