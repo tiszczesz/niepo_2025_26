@@ -10,6 +10,7 @@ public class StudentContext: DbContext
     }
 
     public DbSet<Student> Students { get; set; }
+    public DbSet<Teacher> Teachers { get; set; }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
@@ -39,6 +40,22 @@ public class StudentContext: DbContext
                 LastName = "Zalewski",
                 BirthDate = new DateTime(1994, 11, 02),
                 EctsPoints = 45
+            }
+        );
+        modelBuilder.Entity<Teacher>().HasData();
+            new Teacher
+            {
+                Id = 1,
+                FirstName = "Jan",
+                LastName = "Nowak",
+                Salary = 5000
+            },
+            new Teacher
+            {
+                Id = 2,
+                FirstName = "Anna",
+                LastName = "Kowalska",
+                Salary = 6000
             }
         );
     }
