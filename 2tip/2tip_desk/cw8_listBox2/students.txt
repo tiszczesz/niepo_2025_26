@@ -1,0 +1,11 @@
+1|Antoni|Małecki|2001-12-03
+2|Barbara|Kowalski|2002-05-15
+3|Czesław|Nowak|2003-01-22
+4|Dorota|Lewandowski|2002-08-17
+5|Eugeniusz|Piotrowski|2001-11-30
+6|Franciszka|Grabowski|2002-03-09
+7|Grzegorz|Zajęcie|2003-07-14
+8|Helena|Kucharski|2002-09-25
+9|Ignacy|Górski|2001-04-11
+10|Joanna|Szymanski|2003-02-28
+11|Kazimierz|Białkowski|2002-06-19
