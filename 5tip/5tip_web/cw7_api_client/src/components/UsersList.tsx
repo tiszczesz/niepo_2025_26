@@ -6,6 +6,7 @@ type Props = {}
 
 const UsersList = (props: Props) => {
     const [users, setUsers] = useState<User[]>([])
+    let lp = 0;
     useEffect(() => {
         (async () => {
             const users = await getAll();
@@ -15,15 +16,36 @@ const UsersList = (props: Props) => {
     }, [])
     return (
         <>
-        <div>UsersList</div>
-        <ul>
-            {users.map((elem)=>(
-                <li key={elem.id}>
-                    {elem.userName} adres: {elem.email}
-                    data rejestracji {elem.createdAt}
-                </li>
-            ))}
-        </ul>
+            <div>UsersList</div>
+            <table className="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Lp</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Data dodania</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    {users.map((elem) => (
+                        <tr key={elem.id}>
+                            <td>{++lp}</td>
+                            <td>{elem.userName}</td>
+                            <td>
+                                {elem.email}
+                            </td>
+                            <td>
+                                {new Date(elem.createdAt).toLocaleDateString()}
+                            </td>
+                            <td>
+                                <button className="btn btn-sm btn-danger">Usuń</button>
+                            </td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
         </>
     )
 }
