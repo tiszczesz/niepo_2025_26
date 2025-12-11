@@ -20,4 +20,11 @@ app.MapGet("/api/users/{id}",(int id) =>
     //jesli znaleziono, zwroc uzytkownika kod 200
     return Results.Ok(user);
 });
+app.MapPost("/api/users", (User user) =>
+{
+    //dodaj uzytkownika do repozytorium
+    usersRepo.AddUser(user);
+    //zwroc kod 201
+    return Results.Created($"/api/users/{user.Id}", user);
+});
 app.Run();
