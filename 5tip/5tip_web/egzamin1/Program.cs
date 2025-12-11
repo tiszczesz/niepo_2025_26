@@ -2,7 +2,23 @@ using egzamin1.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
+
+//dodanie CORS jesli potrzebne
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
+
+
 var app = builder.Build();
+//uzycie CORS jesli potrzebne
+app.UseCors("AllowAll");
+
 app.UseStaticFiles();
 //app.MapGet("/", () => "Hello World!");
 app.MapDefaultControllerRoute();
@@ -26,5 +42,10 @@ app.MapPost("/api/users", (User user) =>
     usersRepo.AddUser(user);
     //zwroc kod 201
     return Results.Created($"/api/users/{user.Id}", user);
+});
+app.MapDelete("/api/users/{id}", (int id) =>
+{    
+    usersRepo.DeleteUser(id);
+    return Results.NoContent();
 });
 app.Run();

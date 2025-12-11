@@ -65,4 +65,14 @@ public class UsersRepo
         conn.Close();
         return user; 
     }
+    public void DeleteUser(int id)
+    {
+        using SqliteConnection conn = new SqliteConnection(_connectionString);
+        using SqliteCommand cmd = conn.CreateCommand();
+        cmd.CommandText = "DELETE FROM Users WHERE UserID=@Id";
+        cmd.Parameters.AddWithValue("@Id", id);
+        conn.Open();
+        cmd.ExecuteNonQuery();
+        conn.Close();
+    }
 }
