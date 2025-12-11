@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { getAll } from "../models/services"
 import type { User } from "../models/types"
+import AddUser from "./AddUser"
 
 type Props = {}
 
@@ -17,6 +18,7 @@ const UsersList = (props: Props) => {
     return (
         <>
             <div>UsersList</div>
+            <AddUser />
             <table className="table table-striped">
                 <thead>
                     <tr>
