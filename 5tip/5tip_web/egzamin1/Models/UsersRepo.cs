@@ -44,4 +44,25 @@ public class UsersRepo
         cmd.ExecuteNonQuery();
         conn.Close();
     }
+
+    public User? GetUserById(int id)
+    {
+        using SqliteConnection conn = new SqliteConnection(_connectionString);
+        using SqliteCommand cmd = conn.CreateCommand();
+        cmd.CommandText = "SELECT * FROM Users WHERE UserID=@Id";
+        cmd.Parameters.AddWithValue("@Id", id);
+        conn.Open();
+        using SqliteDataReader reader = cmd.ExecuteReader();
+        if(!reader.HasRows) return null; //brak rekordu
+        reader.Read();        
+        var user = new User
+        {
+            Id = reader.GetInt32(0),
+            UserName = reader.GetString(1),
+            Email = reader.GetString(2),
+            CreatedAt = reader.GetDateTime(3)
+        };
+        conn.Close();
+        return user; 
+    }
 }
