@@ -1,0 +1,28 @@
+﻿@model cw4_school2025.Models.Student
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dodawanie studenta</title>
+</head>
+<body>
+    <h1>Dodawanie studenta</h1>
+    <form method="post" asp-action="CreateStudent">
+        <label asp-for="FirstName">Imię:</label>
+        <input type="text" id="FirstName" asp-for="FirstName" required /><br />
+
+        <label asp-for="LastName">Nazwisko:</label>
+        <input type="text" id="LastName" asp-for="LastName" required /><br />
+
+        <label asp-for="BirthDate">Data urodzenia:</label>
+        <input type="date" id="BirthDate" asp-for="BirthDate" required /><br />
+
+        <label asp-for="EctsPoints">Punkty ECTS:</label>
+        <input type="number" id="EctsPoints" asp-for="EctsPoints" required /><br />
+
+        <input type="submit" value="Dodaj studenta" />
+    </form>
+</body>
+</html>

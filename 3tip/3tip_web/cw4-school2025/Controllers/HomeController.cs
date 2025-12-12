@@ -16,6 +16,22 @@ namespace cw4_school2025.Controllers
             var students = _context.Students.ToList();
             return View(students);
         }
+        [HttpGet]
+        public IActionResult CreateStudent()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult CreateStudent(Student student)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Students.Add(student);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(student);
+        }
 
     }
 }
