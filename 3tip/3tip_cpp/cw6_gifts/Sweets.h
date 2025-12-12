@@ -2,7 +2,7 @@
 #include <iostream>
 #include "Gift.h"
 class Sweets :
-    public Gift
+	public Gift, public IDurability
 {
     protected:
     double weight; // in grams
@@ -21,6 +21,10 @@ class Sweets :
     void Open() override {
         std::cout << "Otwarcie prezentu slodycze o nazwie: "
             << name << std::endl;
+	}
+    void DurabilityInfo() override {
+        std::cout << " ------ Data wa¿noœci s³odyczy o nazwie " << name 
+            << ": " << expiryDate << std::endl;
 	}
 };
 

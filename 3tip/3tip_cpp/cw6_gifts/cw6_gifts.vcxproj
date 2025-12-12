@@ -136,6 +136,7 @@
     <ClInclude Include="Food.h" />
     <ClInclude Include="Functions.h" />
     <ClInclude Include="Gift.h" />
+    <ClInclude Include="IDurability.h" />
     <ClInclude Include="SizeEnum.h" />
     <ClInclude Include="Sweets.h" />
   </ItemGroup>
