@@ -133,9 +133,11 @@
   <ItemGroup>
     <ClInclude Include="Cloth.h" />
     <ClInclude Include="Electronics.h" />
+    <ClInclude Include="Food.h" />
     <ClInclude Include="Functions.h" />
     <ClInclude Include="Gift.h" />
     <ClInclude Include="SizeEnum.h" />
+    <ClInclude Include="Sweets.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
