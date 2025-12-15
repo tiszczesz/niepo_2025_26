@@ -4,7 +4,7 @@
 npm init -y
 npm i typescript @types/node -D
 npx tsc -init
-// katalog src i dost
+// katalog src i dist
 // ustawienie "types":"module"
 ```
 
