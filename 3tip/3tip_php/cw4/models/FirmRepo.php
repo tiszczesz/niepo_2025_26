@@ -30,9 +30,18 @@ class FirmRepo
             return $result;
         }
         while ($row = $res->fetch_assoc()) {
-            $result[] = $row;
+            $person = new Person(
+                $row['id'],
+                $row['firstname'],
+                $row['lastname'],
+                (int)$row['age']
+            );
+            $result[] = $person;
         }
         return $result;
     }
+    // function getStudents():array {
+        
+    // }
 
 }

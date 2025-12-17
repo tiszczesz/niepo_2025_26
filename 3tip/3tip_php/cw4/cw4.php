@@ -16,7 +16,7 @@
     require_once 'models/FirmRepo.php';
     $repo = new FirmRepo();
     $persons = $repo->getPersons();
-   // var_dump($persons);
+    var_dump($persons);
     ?>
     <div>
         <ul>
