@@ -14,6 +14,7 @@ class Teacher extends Person implements IEmployee
         // Wywołanie konstruktora klasy bazowej (Person) 
         // ustawia właściwości odziedziczone
         parent::__construct(
+            $id,
             $firstName,
             $lastName,
             $age

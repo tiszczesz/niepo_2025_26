@@ -1,16 +1,17 @@
 <?php
-
-class Worker extends Person implements IEmployee{
+require_once 'IEmployee.php';
+class Worker extends Person implements IEmployee
+{
     //funkcja i czas pracy
     public function __construct(
-        int $id=-1,
+        int $id = -1,
         string $firstName = '',
         string $lastName = '',
         int $age = 0,
         protected string $jobFunction = '',
         protected float $workHours = 0.0
     ) {
-        parent::__construct($id,$firstName, $lastName, $age);
+        parent::__construct($id, $firstName, $lastName, $age);
     }
     public function getJobFunction(): string
     {
