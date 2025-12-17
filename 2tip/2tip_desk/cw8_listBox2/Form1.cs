@@ -34,10 +34,27 @@ namespace cw8_listBox2
         {
             // usuwanie zaznaczonego studenta z listy
             var selectedStudent = lbStudents.SelectedItem as Student;
-            if (selectedStudent != null) {
+            if (selectedStudent != null)
+            {
                 _studentsRepo.Students.Remove(selectedStudent);
                 LoadToListBox();
             }
+        }
+
+        private void dateTimePicker1_Leave(object sender, EventArgs e)
+        {
+            btnAdd.Enabled = tbFirstname.Text.Length > 2
+                             && tbLastName.Text.Length > 2
+                             && dateTimePicker1.Text.Length > 2;
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e) {
+            Student newStudent = new Student() {
+                Id = 1,
+                FirstName = tbFirstname.Text,
+                LastName = tbLastName.Text,
+                BirthDate = dateTimePicker1.Value
+            };
         }
     }
 }

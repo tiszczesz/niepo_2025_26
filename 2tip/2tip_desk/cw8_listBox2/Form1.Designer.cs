@@ -32,7 +32,13 @@
             btnLoad = new Button();
             lbListInfo = new Label();
             btnDelete = new Button();
-            button1 = new Button();
+            btnAdd = new Button();
+            label1 = new Label();
+            tbFirstname = new TextBox();
+            tbLastName = new TextBox();
+            label2 = new Label();
+            label3 = new Label();
+            dateTimePicker1 = new DateTimePicker();
             SuspendLayout();
             // 
             // lbStudents
@@ -76,22 +82,83 @@
             btnDelete.UseVisualStyleBackColor = true;
             btnDelete.Click += btnDelete_Click;
             // 
-            // button1
+            // btnAdd
             // 
-            button1.Enabled = false;
-            button1.Location = new Point(341, 206);
-            button1.Name = "button1";
-            button1.Size = new Size(177, 58);
-            button1.TabIndex = 4;
-            button1.Text = "Usuń zaznaczonego studenta";
-            button1.UseVisualStyleBackColor = true;
+            btnAdd.Enabled = false;
+            btnAdd.Location = new Point(341, 206);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(177, 58);
+            btnAdd.TabIndex = 4;
+            btnAdd.Text = "Dodaj studenta";
+            btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(580, 53);
+            label1.Name = "label1";
+            label1.Size = new Size(33, 15);
+            label1.TabIndex = 5;
+            label1.Text = "Imię:";
+            // 
+            // tbFirstname
+            // 
+            tbFirstname.Location = new Point(623, 50);
+            tbFirstname.Name = "tbFirstname";
+            tbFirstname.PlaceholderText = "Podaj imię";
+            tbFirstname.Size = new Size(200, 23);
+            tbFirstname.TabIndex = 6;
+            tbFirstname.Leave += dateTimePicker1_Leave;
+            // 
+            // tbLastName
+            // 
+            tbLastName.Location = new Point(623, 95);
+            tbLastName.Name = "tbLastName";
+            tbLastName.PlaceholderText = "Podaj nazwisko";
+            tbLastName.Size = new Size(200, 23);
+            tbLastName.TabIndex = 8;
+            tbLastName.Leave += dateTimePicker1_Leave;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(553, 102);
+            label2.Name = "label2";
+            label2.Size = new Size(60, 15);
+            label2.TabIndex = 7;
+            label2.Text = "Nazwisko:";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(524, 146);
+            label3.Name = "label3";
+            label3.Size = new Size(89, 15);
+            label3.TabIndex = 9;
+            label3.Text = "Data urodzenia:";
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Format = DateTimePickerFormat.Short;
+            dateTimePicker1.Location = new Point(619, 140);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(200, 23);
+            dateTimePicker1.TabIndex = 10;
+            dateTimePicker1.Leave += dateTimePicker1_Leave;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(button1);
+            ClientSize = new Size(840, 450);
+            Controls.Add(dateTimePicker1);
+            Controls.Add(label3);
+            Controls.Add(tbLastName);
+            Controls.Add(label2);
+            Controls.Add(tbFirstname);
+            Controls.Add(label1);
+            Controls.Add(btnAdd);
             Controls.Add(btnDelete);
             Controls.Add(lbListInfo);
             Controls.Add(btnLoad);
@@ -108,6 +175,12 @@
         private Button btnLoad;
         private Label lbListInfo;
         private Button btnDelete;
-        private Button button1;
+        private Button btnAdd;
+        private Label label1;
+        private TextBox tbFirstname;
+        private TextBox tbLastName;
+        private Label label2;
+        private Label label3;
+        private DateTimePicker dateTimePicker1;
     }
 }
