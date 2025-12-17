@@ -1,0 +1,18 @@
+# .NET artifacts
+bin/
+obj/
+*.user
+*.suo
+*.cache
+
+# Node modules
+node_modules/
+package-lock.json
+
+# Tailwind output (generated)
+wwwroot/css/output.css
+
+# IDE
+.vs/
+.vscode/
+.idea/
