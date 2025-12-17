@@ -32,6 +32,7 @@
             btnLoad = new Button();
             lbListInfo = new Label();
             btnDelete = new Button();
+            button1 = new Button();
             SuspendLayout();
             // 
             // lbStudents
@@ -75,11 +76,22 @@
             btnDelete.UseVisualStyleBackColor = true;
             btnDelete.Click += btnDelete_Click;
             // 
+            // button1
+            // 
+            button1.Enabled = false;
+            button1.Location = new Point(341, 206);
+            button1.Name = "button1";
+            button1.Size = new Size(177, 58);
+            button1.TabIndex = 4;
+            button1.Text = "Usuń zaznaczonego studenta";
+            button1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button1);
             Controls.Add(btnDelete);
             Controls.Add(lbListInfo);
             Controls.Add(btnLoad);
@@ -96,5 +108,6 @@
         private Button btnLoad;
         private Label lbListInfo;
         private Button btnDelete;
+        private Button button1;
     }
 }
