@@ -30,3 +30,10 @@ npx tsc -init
 ```console
 npx tsc -watch
 ```
+
+### Tworzenie projektu Vite przez Create
+
+```console
+npm create vite@latest
+
+```
