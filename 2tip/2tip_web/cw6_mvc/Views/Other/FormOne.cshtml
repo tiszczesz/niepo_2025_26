@@ -1,0 +1,43 @@
+﻿@model cw6_mvc.Models.Person
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/style.css">
+    <title>Document</title>
+</head>
+<body>
+     <header>
+        <nav style="display: flex; gap: 10px; margin-bottom: 20px;">
+            <a class="menu-item" asp-action="Index" asp-controller="Home">Strona domowa</a>
+            <a class="menu-item" asp-action="Index" asp-controller="Info">Do kontrolera Info</a>
+            <a class="menu-item" asp-action="ActionTwo" asp-controller="Info">Informacje o kliencie</a>
+            <a class="menu-item" asp-action="FormOne" asp-controller="Other">Formularz</a>
+        </nav>
+    </header>
+    <h1>formularz zgłoszeniowy</h1>
+    <hr>
+    <form asp-action="FormOne" method="post">
+        <input type="text" asp-for="Firstname" placeholder="Imię" />
+        <span asp-validation-for="Firstname"></span> <br>
+        <input type="text" asp-for="Lastname" placeholder="Nazwisko" />
+        <span asp-validation-for="Lastname"></span> <br>
+        <input type="number" asp-for="Age" placeholder="Wiek" />
+        <span asp-validation-for="Age"></span> <br>
+        <input type="submit" value="Wyślij" />
+    </form>
+    <hr>
+    @if(ViewBag.Message != null)
+    {
+        <h3>@ViewBag.Message</h3>
+        <div>
+            <p>Imię: @Model.Firstname</p>
+            <p>Nazwisko: @Model.Lastname</p>
+            <p>Wiek: @Model.Age</p>
+        </div>
+    }else{
+        <h3>Proszę wypełnić formularz</h3>
+    }
+</body>
+</html>

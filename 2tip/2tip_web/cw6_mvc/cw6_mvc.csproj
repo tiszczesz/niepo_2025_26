@@ -12,6 +12,7 @@
     <Folder Include="Views\" />
     <Folder Include="Views\Home\" />
     <Folder Include="Views\Info\" />
+    <Folder Include="Views\Other\" />
   </ItemGroup>
 
 </Project>
