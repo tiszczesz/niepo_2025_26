@@ -1,24 +1,37 @@
-import './style.css'
-import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.ts'
+import './style.css';
+import { colors } from './data';
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
-  </div>
-`
+const appDiv: HTMLDivElement = document.createElement('div');
+appDiv.textContent = 'Hello TypeScript + Vite!';
+appDiv.classList.add('bordered');
+const ulElemtent: HTMLUListElement = document.createElement('ul');
+for (const color of colors) {
+  const liElement: HTMLLIElement = document.createElement('li');
+  liElement.textContent = color;
+  ulElemtent.appendChild(liElement);
+}
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+//utwórz select z opcjami kolorów i ewentualnie ożywienie zmiany koloru tła
+const selectElement: HTMLSelectElement = document.createElement('select');
+for (const color of colors) {
+  const optionElement: HTMLOptionElement = document.createElement('option');
+  optionElement.value = color;
+  optionElement.textContent = color;
+  selectElement.appendChild(optionElement);
+}
+//w divie <div class='scene bordered'></div>
+const sceneDiv: HTMLDivElement = document.createElement('div');
+sceneDiv.classList.add('scene', 'bordered');
+
+//szukamy div app w index.html
+const rootDiv: HTMLElement | null = document.querySelector<HTMLElement>('#app');
+if (rootDiv) {
+  rootDiv.appendChild(appDiv);
+  rootDiv.appendChild(ulElemtent);
+  rootDiv.appendChild(selectElement);
+  rootDiv.appendChild(sceneDiv);
+  selectElement.addEventListener('change', (event: Event) => {
+    const selectedColor = (event.target as HTMLSelectElement).value;
+    sceneDiv.style.backgroundColor = selectedColor;
+  });
+}
