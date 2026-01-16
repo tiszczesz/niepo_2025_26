@@ -5,9 +5,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/style.css">
     <title>Document</title>
 </head>
 <body>
+    <header>
+        <nav style="display: flex; gap: 10px; margin-bottom: 20px;">
+            <a class="menu-item" asp-action="Index" asp-controller="Home">Strona domowa</a>
+            <a class="menu-item" asp-action="Index" asp-controller="Info">Do kontrolera Info</a>
+            <a class="menu-item" asp-action="ActionTwo" asp-controller="Info">Informacje o kliencie</a>
+        </nav>
+    </header>
     <h1>Fish View</h1>
     <p>Wartość zmiennej: @Model</p>
 </body>

@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using cw6_mvc.Models;
 
 namespace cw6_mvc.Controllers
 {
@@ -11,6 +12,14 @@ namespace cw6_mvc.Controllers
             $"Controller: {RouteData.Values["controller"]}, "
                       + $"Action: {RouteData.Values["action"]}";
             return View("Fish", info);
+        }
+        public IActionResult ActionTwo()
+        {
+            var clientInfo = new ClientInfo
+            {
+                ClientName = "Sample Client"
+            };
+            return View("ClientInfoView", clientInfo);
         }
 
     }

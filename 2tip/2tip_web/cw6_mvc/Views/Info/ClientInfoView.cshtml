@@ -1,10 +1,11 @@
-﻿<!DOCTYPE html>
+﻿@model cw6_mvc.Models.ClientInfo
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="~/style.css">
-    <title>Index</title>
+    <title>Document</title>
 </head>
 <body>
     <header>
@@ -14,8 +15,7 @@
             <a class="menu-item" asp-action="ActionTwo" asp-controller="Info">Informacje o kliencie</a>
         </nav>
     </header>
-    <h1>Strona Index</h1>
-    <p>Witamy na stronie głównej!</p>
-    <p>Dzisiaj jest: @DateTime.Now.ToString("dddd, dd MMMM yyyy")</p>
+    <h1>Informacje o kliencie: @Model.ClientName</h1>
+    <p class="info">Data utworzenia: @Model.CreateDate</p>
 </body>
 </html>
