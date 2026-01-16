@@ -15,7 +15,11 @@
         {
             <li>@student.FirstName @student.LastName
                 - data urodzenia: @student.BirthDate.ToShortDateString()
-                punkty: @student.EctsPoints</li>
+                punkty: @student.EctsPoints
+                <a asp-action="DeleteStudent" asp-route-id="@student.Id">Usuń</a>
+                &nbsp;<a asp-action="UpdateStudent" asp-route-id="@student.Id">Zmień</a>
+
+            </li>
         }
     </ul>
     <div>
