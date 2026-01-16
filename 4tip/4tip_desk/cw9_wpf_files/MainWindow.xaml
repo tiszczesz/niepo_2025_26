@@ -1,0 +1,52 @@
+﻿<Window x:Class="cw9_wpf_files.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:cw9_wpf_files"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+      <Grid.RowDefinitions>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Menu>
+                <MenuItem Header="Pliki">
+                    <MenuItem  Header="Otwórz" Click="New_Open"></MenuItem>
+                    <MenuItem Header="Zapisz" Click="Save_FileMenu"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="Edycja"/>
+            </Menu> 
+            <Menu Grid.Column="1">
+                <MenuItem Header="Pomoc">
+                    <MenuItem Header="Microsoft Learn" Click="MernuItem_MicLearn"/>
+                </MenuItem>
+            </Menu>
+        </Grid>
+        
+        <ScrollViewer Grid.Row="1" 
+                      VerticalScrollBarVisibility="Auto"
+                      HorizontalScrollBarVisibility="Auto">
+            <TextBox x:Name="TextShow" 
+                     AcceptsReturn="True" 
+                     AcceptsTab="True"
+                     TextWrapping="Wrap"
+                     BorderThickness="0"
+                     VerticalAlignment="Stretch"
+                     HorizontalAlignment="Stretch"/>
+        </ScrollViewer>
+        
+  <StatusBar Grid.Row="2">
+            <Label x:Name="FileNameLabel" Content=""/>
+            
+  </StatusBar>
+        <Border BorderBrush="Black" BorderThickness="1"/>
+    </Grid>
+</Window>

@@ -1,0 +1,72 @@
+# .gitignore generated for a .NET (WPF) project
+
+# Visual Studio / .NET
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build output
+bin/
+obj/
+out/
+
+# Publish
+publish/
+
+# NuGet
+*.nupkg
+# Packages folder (legacy)
+packages/
+
+# Rider
+.idea/
+*.sln.iml
+
+# ReSharper
+_ReSharper*/
+*.ReSharper*/
+*.DotSettings.user
+
+# Dotnet tools
+.tools/
+.toolstargets/
+
+# User-specific files
+*.local
+secrets.json
+
+# OS generated files
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log
+
+# Test results
+TestResults/
+*.trx
+
+# Coverage
+coverage/
+*.coverage
+*.coveragexml
+
+# Database files
+*.mdf
+*.ldf
+*.sqlite
+*.sqlite3
+
+# Visual Studio Code Workspace
+*.code-workspace
+
+# Others
+*.vspscc
+*.vssscc
+
+# Avoid ignoring solution/project files
+!/*.sln
+!/**/*.csproj
