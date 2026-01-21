@@ -1,0 +1,32 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.center{
+    text-align: center;
+    margin: auto;
+}
+.footer{
+    background-color: lightgray;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.container{
+    display: flex;
+    gap: 20px;
+}
+.panel{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    width: 200px;
+}
+.item{
+    border: 1px solid gray;
+    padding: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
