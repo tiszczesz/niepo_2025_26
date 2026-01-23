@@ -8,11 +8,15 @@ namespace cw6_mvc.Controllers
         // GET: OtherController
         
         [HttpGet]
+
+        //wyswietlanie formularza pustego
         public ActionResult FormOne()
         {
 
             return View();
         }
+        //odbieranie danych z formularza na serwer
+        //wyswietlanie pod formularzem
         [HttpPost]
         public ActionResult FormOne(Person person)
         {
