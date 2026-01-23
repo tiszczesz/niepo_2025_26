@@ -1,0 +1,9 @@
+﻿@model List<Division>
+<ul class="list-group p-0 m-0">
+    @foreach (var division in Model)
+    {
+        <li class="list-group-item p-0 border-0 mb-2">
+            <a class="w-100" asp-action="GetStudentsForDivision" asp-route-id="@division.Id">@division.Name</a>
+        </li>
+    }
+</ul>

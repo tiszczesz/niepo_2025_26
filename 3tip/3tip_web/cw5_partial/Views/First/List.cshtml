@@ -1,0 +1,13 @@
+﻿@using cw5_partial.Models
+@{
+    ViewData["Title"] = "Divisions and Students";
+}
+
+<div class="d-flex gap-5">
+    <aside class="w-40">
+        @await Html.PartialAsync("_MenuParialsView", ViewBag.Divisions as List<Division>)
+    </aside>
+    <aside class="w-60">
+        <partial name="StudentsForDivision" model="@Model" />
+    </aside>
+</div>
