@@ -12,26 +12,38 @@ public class FakeUserRepo : IUserRepo
     };
     public void AddUser(User user)
     {
-        throw new NotImplementedException();
+        _users.Add(user);
     }
 
     public void DeleteUser(int id)
     {
-        throw new NotImplementedException();
+        var user = GetUserById(id);
+        if (user != null)
+        {
+            _users.Remove(user);
+        }
     }
 
     public List<User> GetAllUsers()
     {
-        throw new NotImplementedException();
+        return _users;
     }
 
     public User? GetUserById(int id)
     {
-        throw new NotImplementedException();
+        return _users.Find(u => u.Id == id);
     }
 
     public void UpdateUser(User user)
     {
-        throw new NotImplementedException();
+        //znajdź oryginalnego użytkownika
+        var existingUser = GetUserById(user.Id);
+        //jesli istnieje, zaktualizuj jego dane
+        if (existingUser != null)
+        {
+            existingUser.Firstname = user.Firstname;
+            existingUser.Lastname = user.Lastname;
+            existingUser.Age = user.Age;
+        }
     }
 }
