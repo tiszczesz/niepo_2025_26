@@ -5,6 +5,7 @@ CREATE TABLE Students (
     lastname TEXT NOT NULL,
     enrollment_date DATE NOT NULL
 );
+DELETE FROM Students;
 
 INSERT INTO Students (firstname, lastname, enrollment_date) VALUES
 ('Jan', 'Kowalski', '2023-09-01'),
