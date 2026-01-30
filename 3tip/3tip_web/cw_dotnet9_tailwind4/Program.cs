@@ -1,11 +1,12 @@
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddControllersWithViews();
 var app = builder.Build();
 
 // Włączenie obsługi plików statycznych
 app.UseStaticFiles();
-
+app.MapDefaultControllerRoute();
 // Endpoint zwracający stronę HTML z Tailwind CSS
-app.MapGet("/", () => Results.Content("""
+/* app.MapGet("/", () => Results.Content("""
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -51,5 +52,7 @@ app.MapGet("/", () => Results.Content("""
 </body>
 </html>
 """, "text/html"));
+*/
 
 app.Run();
+    
