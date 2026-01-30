@@ -18,10 +18,21 @@ fun main() {
     }
     println(" ------------------------------------------\n")
     ShowOnlyEvenNumbers(10)
+    println(" ------------------------------------------\n")
+    ShowOnlyEvenNumbers2(10)
 }
 
 fun ShowOnlyEvenNumbers(max: Int) {
-
+    for (i in 1..max) {
+        println(i*2)
+    }
+}
+fun ShowOnlyEvenNumbers2(max: Int) {
+    for (i in 1..max) {
+        if (isEven(i)) {
+            println(i)
+        }
+    }
 }
 //funkcja zapis strzałkowa
 fun isEven(number: Int): Boolean = number % 2 == 0
