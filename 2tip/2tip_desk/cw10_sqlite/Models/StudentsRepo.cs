@@ -29,8 +29,11 @@ namespace cw10_sqlite.Models
                         Lastname = reader.GetString(2),
                         EnrollmentDate = reader.GetDateTime(3)
                     };
+                    Students.Add(student);
                 }
+                conn.Close();
             }
+            
             return Students;
         }
     }

@@ -53,6 +53,7 @@
             btnLoad.TabIndex = 0;
             btnLoad.Text = "Załaduj dane";
             btnLoad.UseVisualStyleBackColor = true;
+            btnLoad.Click += btnLoad_Click;
             // 
             // dataGridView1
             // 
