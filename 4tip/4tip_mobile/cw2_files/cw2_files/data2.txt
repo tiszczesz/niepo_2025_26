@@ -1,0 +1,1 @@
+To jest domyślna zawartość pliku data2.txt.
