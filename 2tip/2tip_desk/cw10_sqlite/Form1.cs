@@ -31,8 +31,18 @@ namespace cw10_sqlite
         {
             if(dataGridView1.CurrentRow == null) return;
                
-            MessageBox.Show("Kliknięto w wiersz o indeksie: "
-                            + dataGridView1.CurrentRow.Index);
+            //MessageBox.Show("Kliknięto w wiersz o indeksie: "
+            //                + dataGridView1.CurrentRow.Index);
+            //pobieranie danych studenta z klikniętego wiersza
+            Student? student = dataGridView1.CurrentRow.DataBoundItem as Student;
+            if(student == null) return;
+            UpdateStudentForm(student);
+        }
+
+        private void UpdateStudentForm(Student student) {
+            tbFirstName.Text = student.Firstname;
+            tbLastName.Text = student.Lastname;
+            dtEnrolment.Value = student.EnrollmentDate;
         }
     }
 }
