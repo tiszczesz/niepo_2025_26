@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            btnClose = new Button();
+            btnUpdate = new Button();
+            btnDelete = new Button();
+            btnAdd = new Button();
             dtEnrolment = new DateTimePicker();
             tbLastName = new TextBox();
             tbFirstName = new TextBox();
@@ -37,7 +41,6 @@
             label1 = new Label();
             btnLoad = new Button();
             dataGridView1 = new DataGridView();
-            button1 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -45,7 +48,10 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(255, 224, 192);
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(btnClose);
+            panel1.Controls.Add(btnUpdate);
+            panel1.Controls.Add(btnDelete);
+            panel1.Controls.Add(btnAdd);
             panel1.Controls.Add(dtEnrolment);
             panel1.Controls.Add(tbLastName);
             panel1.Controls.Add(tbFirstName);
@@ -59,23 +65,64 @@
             panel1.Size = new Size(227, 450);
             panel1.TabIndex = 0;
             // 
+            // btnClose
+            // 
+            btnClose.Location = new Point(12, 403);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new Size(200, 35);
+            btnClose.TabIndex = 10;
+            btnClose.Text = "Zakończ";
+            btnClose.UseVisualStyleBackColor = true;
+            btnClose.Click += btnClose_Click;
+            // 
+            // btnUpdate
+            // 
+            btnUpdate.Enabled = false;
+            btnUpdate.Location = new Point(12, 322);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(200, 35);
+            btnUpdate.TabIndex = 9;
+            btnUpdate.Text = "Zapisz zmiany";
+            btnUpdate.UseVisualStyleBackColor = true;
+            // 
+            // btnDelete
+            // 
+            btnDelete.Enabled = false;
+            btnDelete.Location = new Point(12, 272);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(200, 35);
+            btnDelete.TabIndex = 8;
+            btnDelete.Text = "Usuń wybrany";
+            btnDelete.UseVisualStyleBackColor = true;
+            // 
+            // btnAdd
+            // 
+            btnAdd.Enabled = false;
+            btnAdd.Location = new Point(12, 221);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(200, 35);
+            btnAdd.TabIndex = 7;
+            btnAdd.Text = "Dodaj nowy";
+            btnAdd.UseVisualStyleBackColor = true;
+            // 
             // dtEnrolment
             // 
-            dtEnrolment.Location = new Point(12, 280);
+            dtEnrolment.Format = DateTimePickerFormat.Short;
+            dtEnrolment.Location = new Point(12, 182);
             dtEnrolment.Name = "dtEnrolment";
             dtEnrolment.Size = new Size(200, 23);
             dtEnrolment.TabIndex = 6;
             // 
             // tbLastName
             // 
-            tbLastName.Location = new Point(12, 188);
+            tbLastName.Location = new Point(12, 121);
             tbLastName.Name = "tbLastName";
             tbLastName.Size = new Size(200, 23);
             tbLastName.TabIndex = 5;
             // 
             // tbFirstName
             // 
-            tbFirstName.Location = new Point(12, 111);
+            tbFirstName.Location = new Point(12, 72);
             tbFirstName.Name = "tbFirstName";
             tbFirstName.Size = new Size(200, 23);
             tbFirstName.TabIndex = 4;
@@ -83,7 +130,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(12, 252);
+            label3.Location = new Point(12, 154);
             label3.Name = "label3";
             label3.Size = new Size(70, 15);
             label3.TabIndex = 3;
@@ -92,7 +139,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(12, 170);
+            label2.Location = new Point(12, 103);
             label2.Name = "label2";
             label2.Size = new Size(60, 15);
             label2.TabIndex = 2;
@@ -101,7 +148,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(12, 93);
+            label1.Location = new Point(12, 54);
             label1.Name = "label1";
             label1.Size = new Size(33, 15);
             label1.TabIndex = 1;
@@ -111,7 +158,7 @@
             // 
             btnLoad.Location = new Point(12, 12);
             btnLoad.Name = "btnLoad";
-            btnLoad.Size = new Size(200, 52);
+            btnLoad.Size = new Size(200, 35);
             btnLoad.TabIndex = 0;
             btnLoad.Text = "Załaduj dane";
             btnLoad.UseVisualStyleBackColor = true;
@@ -131,15 +178,6 @@
             dataGridView1.Size = new Size(573, 450);
             dataGridView1.TabIndex = 1;
             dataGridView1.Click += dataGridView1_Click;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(12, 321);
-            button1.Name = "button1";
-            button1.Size = new Size(200, 52);
-            button1.TabIndex = 7;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -167,6 +205,9 @@
         private TextBox tbLastName;
         private TextBox tbFirstName;
         private DateTimePicker dtEnrolment;
-        private Button button1;
+        private Button btnAdd;
+        private Button btnClose;
+        private Button btnUpdate;
+        private Button btnDelete;
     }
 }

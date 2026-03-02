@@ -29,20 +29,25 @@ namespace cw10_sqlite
 
         private void dataGridView1_Click(object sender, EventArgs e)
         {
-            if(dataGridView1.CurrentRow == null) return;
-               
+            if (dataGridView1.CurrentRow == null) return;
+
             //MessageBox.Show("Kliknięto w wiersz o indeksie: "
             //                + dataGridView1.CurrentRow.Index);
             //pobieranie danych studenta z klikniętego wiersza
             Student? student = dataGridView1.CurrentRow.DataBoundItem as Student;
-            if(student == null) return;
+            if (student == null) return;
             UpdateStudentForm(student);
         }
 
-        private void UpdateStudentForm(Student student) {
+        private void UpdateStudentForm(Student student)
+        {
             tbFirstName.Text = student.Firstname;
             tbLastName.Text = student.Lastname;
             dtEnrolment.Value = student.EnrollmentDate;
+        }
+
+        private void btnClose_Click(object sender, EventArgs e) {
+            Close();
         }
     }
 }
