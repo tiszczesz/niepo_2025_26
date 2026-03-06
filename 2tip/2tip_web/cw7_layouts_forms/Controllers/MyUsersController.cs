@@ -36,6 +36,11 @@ namespace cw7_layouts_forms.Controllers
             //jeśli model jest niepoprawny, to zwracamy widok Create z błędami walidacji
             return View(user);
         }
+        public IActionResult Delete(int id)
+        {
+            _repo.DeleteUser(id);
+            return RedirectToAction("List");
+        }
 
     }
 }
