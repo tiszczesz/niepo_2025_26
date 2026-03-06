@@ -30,6 +30,7 @@ namespace cw7_layouts_forms.Controllers
             {
                 //tutaj dodajemy użytkownika do bazy danych
                 //po dodaniu przekierowujemy na listę użytkowników
+                _repo.AddUser(user);
                 return RedirectToAction("List");
             }
             //jeśli model jest niepoprawny, to zwracamy widok Create z błędami walidacji
