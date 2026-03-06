@@ -26,7 +26,7 @@ public class UsersRepo
                 Id = reader.GetInt32(0),
                 Username = reader.GetString(1),
                 Email = reader.GetString(2),
-                Date = reader.GetDateTime(3)
+                Date = reader.GetDateTime(3)                
             };
             //dodajemy do listy users
             users.Add(user);
