@@ -47,4 +47,8 @@ public class UsersRepo
         cmd.ExecuteNonQuery();
         conn.Close();
     }
+    public void DeleteUser(int id)
+    {
+        
+    }
 }

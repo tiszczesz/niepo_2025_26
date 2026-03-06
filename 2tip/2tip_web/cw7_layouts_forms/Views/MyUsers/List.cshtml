@@ -9,6 +9,7 @@
             <th>Nazwa użytkownika</th>
             <th>Email</th>
             <th>Data utworzenia</th>
+            <th> ----  </th>
         </tr>
     </thead>
     <tbody>
@@ -18,6 +19,9 @@
                 <td>@u.Username</td>
                 <td>@u.Email</td>
                 <td>@u.Date?.ToString("yyyy-MM-dd")</td>
+                <td>
+                    <a asp-route-id="@u.Id" asp-action="Delete" class="btn btn-outline-danger">Usuń</a>
+                </td>
             </tr>
         }
     </tbody>
