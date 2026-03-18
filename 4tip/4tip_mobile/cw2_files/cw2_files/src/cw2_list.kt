@@ -1,7 +1,8 @@
 fun main(args: Array<String>) {
     //list_cw1()
     //list_cw2()
-    list_cw3()
+    // list_cw3()
+    list_cw4()
 }
 
 fun list_cw1(){
@@ -44,4 +45,33 @@ fun list_cw3(){
     words2.remove("three")
     words2.removeAt(3)
     println("po usnięciu: $words2")
+}
+fun list_cw4(){
+    //funkcja map podobnie jak js
+    val words: MutableList<String> = mutableListOf("one","two","three","four","five","six")
+    println("słowa: $words")
+    val otherWords = words.map { it -> "<p>$it</p>" }
+    println(otherWords)
+    val filterdWords = words.filter { it -> it.length > 3}
+    println(filterdWords)
+    //lista liczb losowych
+    val randomMubers = List(100){i->(1..100).random()}
+    println("Losowe liczby: $randomMubers")
+    //filtrujemy tylko pierwsze
+    val primeNumbers = randomMubers.filter { isPrime(it) }
+    println("Liczby pierwsze: $primeNumbers")
+    println("Srednia liczb pierwszych: ${primeNumbers.average()}")
+    val sortedWods = words.sorted()
+    println(sortedWods)
+    //val descSortedWords = words.sortDescending()
+    words.sortDescending()
+    println(words)
+}
+fun isPrime(number: Int): Boolean {
+    if (number < 2) return false
+    for (i in 2..number) {
+        if (i * i > number) break
+        if (number % i == 0) return false
+    }
+    return true
 }
