@@ -13,9 +13,11 @@ fun cw1(){
     println(s1)
     println("Imię: ${s1.firstName}, nazwisko: ${s1.lastName}, wiek ${s1.age}")
     val students = getStudents()
+    val students2 = getStudentsFromFile("data.txt")
     //students.add()
     printStudents(students)
     studentsToFile(students)
+    printStudents(students2)
 }
 fun getStudents() : List<Student>{
     return listOf<Student>(
@@ -39,4 +41,8 @@ fun studentsToFile(students: List<Student>) {
     for(student in students){
         file.appendText("Imię: ${student.firstName}, nazwisko: ${student.lastName}, wiek ${student.age}\n")
     }
+}
+fun getStudentsFromFile(fileName:String) : List<Student>{
+    //todo
+    return listOf<Student>()
 }
