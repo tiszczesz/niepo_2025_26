@@ -17,6 +17,7 @@ fun cw1(){
     //students.add()
     printStudents(students)
     studentsToFile(students)
+    println("    ======= DANE z PLIKU ========= ")
     printStudents(students2)
 }
 fun getStudents() : List<Student>{
@@ -44,5 +45,16 @@ fun studentsToFile(students: List<Student>) {
 }
 fun getStudentsFromFile(fileName:String) : List<Student>{
     //todo
-    return listOf<Student>()
+    val file = File(fileName)
+    val lines = file.readLines()
+    val students = mutableListOf<Student>()
+    for(line in lines){
+        val StudentData = line.split("|")
+        if(StudentData.size != 3){ //błędna linia z danymi studenta
+            continue
+        }
+        val student = Student(StudentData[0],StudentData[1],StudentData[2].toInt())
+        students.add(student)
+    }
+    return students
 }
