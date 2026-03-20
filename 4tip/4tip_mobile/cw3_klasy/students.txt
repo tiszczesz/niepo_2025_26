@@ -1,0 +1,16 @@
+Imię: John, nazwisko: Smith, wiek 21
+Imię: Roman, nazwisko: Polański, wiek 69
+Imię: Monika, nazwisko: Kwika, wiek 33
+Imię: James, nazwisko: Svenska, wiek 55
+Imię: John, nazwisko: Smith, wiek 21
+Imię: Roman, nazwisko: Polański, wiek 69
+Imię: Monika, nazwisko: Kwika, wiek 33
+Imię: James, nazwisko: Svenska, wiek 55
+Imię: John, nazwisko: Smith, wiek 21
+Imię: Roman, nazwisko: Polański, wiek 69
+Imię: Monika, nazwisko: Kwika, wiek 33
+Imię: James, nazwisko: Svenska, wiek 55
+Imię: John, nazwisko: Smith, wiek 21
+Imię: Roman, nazwisko: Polański, wiek 69
+Imię: Monika, nazwisko: Kwika, wiek 33
+Imię: James, nazwisko: Svenska, wiek 55
