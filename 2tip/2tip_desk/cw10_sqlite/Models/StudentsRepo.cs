@@ -36,5 +36,20 @@ namespace cw10_sqlite.Models
             
             return Students;
         }
+
+        public void AddStudent(Student student) {
+            using SqliteConnection conn = new SqliteConnection("Data Source=appdb.db");
+            using SqliteCommand command = conn.CreateCommand();
+            command.CommandText = 
+                "INSERT INTO Students (firstname, lastname, enrollment_date) " +
+                        "VALUES (@firstname, @lastname, @enrollmentDate)";
+            command.Parameters.AddWithValue("@firstname", student.Firstname);
+            command.Parameters.AddWithValue("@lastname", student.Lastname);
+            command.Parameters.AddWithValue("@enrollmentDate", student.EnrollmentDate);
+            conn.Open();
+            command.ExecuteNonQuery();//wykonanie polecenia SQL, które nie zwraca danych
+                                      //(INSERT, UPDATE, DELETE)
+            conn.Close();
+        }
     }
 }

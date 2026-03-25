@@ -104,6 +104,7 @@
             btnAdd.TabIndex = 7;
             btnAdd.Text = "Dodaj nowy";
             btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
             // 
             // dtEnrolment
             // 

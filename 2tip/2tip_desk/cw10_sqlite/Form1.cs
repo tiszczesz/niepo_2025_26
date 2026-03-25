@@ -23,6 +23,7 @@ namespace cw10_sqlite
             //wyświetlenie danych w kontrolce DataGridView
             dataGridView1.DataSource = _students;
             dataGridView1.Columns[0].Visible = false;
+
             // dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             //dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
@@ -46,8 +47,34 @@ namespace cw10_sqlite
             dtEnrolment.Value = student.EnrollmentDate;
         }
 
-        private void btnClose_Click(object sender, EventArgs e) {
+        private void btnClose_Click(object sender, EventArgs e)
+        {
             Close();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(tbFirstName.Text)
+                || string.IsNullOrEmpty(tbLastName.Text)
+                || string.IsNullOrEmpty(dtEnrolment.Text)) {
+                MessageBox.Show("Wypełnij wszystkie pola!");
+                return;
+            }
+            string firstName = tbFirstName.Text.Trim();
+            string lastName = tbLastName.Text.Trim();
+            DateTime enrollmentDate = dtEnrolment.Value;
+            var student = new Student {
+                Firstname = firstName,
+                Lastname = lastName,
+                EnrollmentDate = enrollmentDate
+            };
+            //zapisanie studenta do bazy danych
+            _studentsRepo.AddStudent(student);
+
+            //odświeżenie danych w DataGridView
+            _students = _studentsRepo.GetAll();
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = _students;
         }
     }
 }
