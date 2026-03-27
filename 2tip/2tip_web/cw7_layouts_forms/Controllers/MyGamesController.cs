@@ -7,7 +7,8 @@ namespace cw7_layouts_forms.Controllers
         // GET: MyGamesController
         public ActionResult List()
         {
-            return View();
+            var obj = new { name = "Przyklad", value = 123 };
+            return View(obj);
         }
 
     }
