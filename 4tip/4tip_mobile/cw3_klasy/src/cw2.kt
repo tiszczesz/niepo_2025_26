@@ -10,6 +10,11 @@ fun main(args: Array<String>) {
     m1.DateOf = GregorianCalendar(1999, Calendar.MARCH, 31)
          .time
     println("data wydania: ${m1.DateOf}")
+    println(" ============================================================= ")
+    val u1 = User();
+    val u2 = User("Jan", "Nowak")
+    println(u1)
+    println(u2)
 }
 //klasa bez pól i metod
 //class Movie
@@ -24,6 +29,20 @@ class Movie(var title: String = "",var director: String = "",private var  dateOf
        this.dateOf = value
    }
 
+}
+
+//uzycie dodatkowgo konstruktora
+class User(var firstName: String="",var lastName:String="", var age: Int=0){
+   init {
+       age = if(age < 0) -age else age // ? z innego języka np C++
+       lastName = if(lastName.trim().length==0) "noname" else lastName;
+       firstName = if(firstName.trim().length==0) "noname" else firstName;
+   }
+    //konstruktor jak podamy tylko imie i nazwisko
+    constructor(firstName: String, lastName: String) : this(firstName, lastName, 20)
+    override fun toString(): String {
+        return "User($firstName, $lastName, $age)"
+    }
 }
 
 

@@ -1,0 +1,44 @@
+fun main(args: Array<String>) {
+    println("Hello World!")
+   // val p1 = Person("Peter", 20)
+    val s1 = Student("Roman", 22,5.6)
+    val t1 = Teacher("Roman",45,"chemia")
+   // println(p1.introduce())
+    println(s1.introduce()) //wywołanie metody z klasy bazowej
+    println(t1.introduce())
+    t1.teach()
+    s1.study()
+}
+//domyslnie klasa final dopiero open pozwala na dziedziczenie,
+// konstruktor klasy bazowej musi być wywołany w klasie pochodnej
+abstract class Person(val name: String, val age: Int) {
+    open fun introduce():String {
+        return "Hi, my name is $name and I am $age years old.";
+    }
+    abstract fun info():String
+}
+class Student(name: String, age: Int, val avgMark: Double) : Person(name, age) {
+    override fun introduce():String {
+        return super.introduce() + " I am a student."
+    }
+    fun study() {
+        println("$name is studying. My average mark is $avgMark.")
+    }
+    override fun info():String {
+        return "$name is a student."
+    }
+}
+class Teacher(name: String, age: Int, val subject: String) : Person(name, age) {
+    override fun introduce():String {
+        return super.introduce() + " I am a teacher."
+    }
+
+    override fun info(): String {
+        return "$name is a teacher."
+    }
+
+    fun teach() {
+        println("$name is teaching $subject.")
+    }
+
+}
