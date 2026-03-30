@@ -94,6 +94,7 @@
             btnDelete.TabIndex = 8;
             btnDelete.Text = "Usuń wybrany";
             btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
             // 
             // btnAdd
             // 

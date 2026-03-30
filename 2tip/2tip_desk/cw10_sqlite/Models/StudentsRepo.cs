@@ -50,5 +50,15 @@ namespace cw10_sqlite.Models
                                       //(INSERT, UPDATE, DELETE)
             conn.Close();
         }
+
+        public void DeleteStudent(int id) {
+            using SqliteConnection conn = new SqliteConnection("Data Source=appdb.db");
+            using SqliteCommand command = conn.CreateCommand();
+            command.CommandText = "DELETE FROM Students WHERE id = @id";
+            command.Parameters.AddWithValue("@id", id);
+            conn.Open();
+            command.ExecuteNonQuery();
+            conn.Close();
+        }
     }
 }

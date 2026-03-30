@@ -17,6 +17,7 @@ namespace cw10_sqlite
         {
             LoadStudentsToGrid();
             btnAdd.Enabled = true;
+            btnDelete.Enabled = true;
             // dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             //dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
@@ -49,14 +50,16 @@ namespace cw10_sqlite
         {
             if (string.IsNullOrEmpty(tbFirstName.Text)
                 || string.IsNullOrEmpty(tbLastName.Text)
-                || string.IsNullOrEmpty(dtEnrolment.Text)) {
+                || string.IsNullOrEmpty(dtEnrolment.Text))
+            {
                 MessageBox.Show("Wypełnij wszystkie pola!");
                 return;
             }
             string firstName = tbFirstName.Text.Trim();
             string lastName = tbLastName.Text.Trim();
             DateTime enrollmentDate = dtEnrolment.Value;
-            var student = new Student {
+            var student = new Student
+            {
                 Firstname = firstName,
                 Lastname = lastName,
                 EnrollmentDate = enrollmentDate
@@ -68,7 +71,8 @@ namespace cw10_sqlite
             LoadStudentsToGrid();
         }
 
-        private void LoadStudentsToGrid() {
+        private void LoadStudentsToGrid()
+        {
             //załadowanie danych z bazy danych do listy _students
 
             //ustawiamy właściwości DataGridView
@@ -78,6 +82,17 @@ namespace cw10_sqlite
             //wyświetlenie danych w kontrolce DataGridView
             dataGridView1.DataSource = _students;
             dataGridView1.Columns[0].Visible = false;
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 1) {
+                if (dataGridView1.CurrentRow == null) return;
+                Student? student = dataGridView1.CurrentRow.DataBoundItem as Student;
+                if (student == null) return;
+                _studentsRepo.DeleteStudent(student.Id);
+                LoadStudentsToGrid();
+            }
         }
     }
 }
