@@ -8,6 +8,8 @@ fun main(args: Array<String>) {
     println(t1.introduce())
     t1.teach()
     s1.study()
+    println(" -------- POLIMORFIZM ---------------")
+    Peoples()
 }
 //domyslnie klasa final dopiero open pozwala na dziedziczenie,
 // konstruktor klasy bazowej musi być wywołany w klasie pochodnej
@@ -52,5 +54,18 @@ class Worker(name: String, age: Int, val company: String) : Person(name, age) {
 
     fun work() {
         println("$name is working at $company.")
+    }
+}
+//funkcja wykorzystująca polimorfizm
+fun Peoples(){
+    //lista obiektów klasy bazowej Person
+    val peoples = mutableListOf<Person>()
+    peoples.add(Student("Anna", 19, 4.5))
+    peoples.add(Teacher("John", 40, "Mathematics"))
+    peoples.add(Worker("Mike", 30, "Google"))
+    peoples.add(Student("Sara", 21, 3.8))
+    for (person in peoples) {
+        //polimorficzne uzycie metody info()
+        println(person.info())
     }
 }
