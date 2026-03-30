@@ -40,5 +40,17 @@ class Teacher(name: String, age: Int, val subject: String) : Person(name, age) {
     fun teach() {
         println("$name is teaching $subject.")
     }
+}
+class Worker(name: String, age: Int, val company: String) : Person(name, age) {
+    override fun introduce():String {
+        return super.introduce() + " I am a worker."
+    }
 
+    override fun info(): String {
+        return "$name is a worker."
+    }
+
+    fun work() {
+        println("$name is working at $company.")
+    }
 }
