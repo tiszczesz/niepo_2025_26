@@ -15,15 +15,8 @@ namespace cw10_sqlite
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
-            //załadowanie danych z bazy danych do listy _students
-
-            //ustawiamy właściwości DataGridView
-            //dataGridView1.Columns[0].Visible = false;
-            _students = _studentsRepo.GetAll();
-            //wyświetlenie danych w kontrolce DataGridView
-            dataGridView1.DataSource = _students;
-            dataGridView1.Columns[0].Visible = false;
-
+            LoadStudentsToGrid();
+            btnAdd.Enabled = true;
             // dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             //dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
@@ -72,9 +65,19 @@ namespace cw10_sqlite
             _studentsRepo.AddStudent(student);
 
             //odświeżenie danych w DataGridView
+            LoadStudentsToGrid();
+        }
+
+        private void LoadStudentsToGrid() {
+            //załadowanie danych z bazy danych do listy _students
+
+            //ustawiamy właściwości DataGridView
+            //dataGridView1.Columns[0].Visible = false;
             _students = _studentsRepo.GetAll();
             dataGridView1.DataSource = null;
+            //wyświetlenie danych w kontrolce DataGridView
             dataGridView1.DataSource = _students;
+            dataGridView1.Columns[0].Visible = false;
         }
     }
 }

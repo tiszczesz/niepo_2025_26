@@ -18,3 +18,6 @@ INSERT INTO Students (firstname, lastname, enrollment_date) VALUES
 ('Magdalena', 'Wojcik', '2023-09-04'),
 ('Jakub', 'Dabrowski', '2023-09-05'),
 ('Katarzyna', 'Michalska', '2023-09-05');
+
+
+DELETE FROM Students WHERE id = 12;

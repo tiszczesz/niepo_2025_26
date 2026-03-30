@@ -12,28 +12,26 @@ namespace cw10_sqlite.Models
         public StudentsRepo() { }
 
         public List<Student> GetAll() {
-            if (Students == null) {
-                Students = new List<Student>();
-                //wypełniamy listę studentów danymi z bazy danych
-                using SqliteConnection conn = new SqliteConnection("Data Source=appdb.db");
-                using SqliteCommand command = conn.CreateCommand();
-                command.CommandText = "SELECT * FROM Students";
-                conn.Open();
-                //obiekt reader pozwala nam odczytać dane zwrócone przez bazę danych
-                using SqliteDataReader reader = command.ExecuteReader();
-                while (reader.Read()) {
-                    // wczytywanie do oobiektu student kolejnych rekordów
-                    Student student = new Student {
-                        Id = reader.GetInt32(0),
-                        Firstname = reader.GetString(1),
-                        Lastname = reader.GetString(2),
-                        EnrollmentDate = reader.GetDateTime(3)
-                    };
-                    Students.Add(student);
-                }
-                conn.Close();
-            }
             
+            Students = new List<Student>();
+            //wypełniamy listę studentów danymi z bazy danych
+            using SqliteConnection conn = new SqliteConnection("Data Source=appdb.db");
+            using SqliteCommand command = conn.CreateCommand();
+            command.CommandText = "SELECT * FROM Students";
+            conn.Open();
+            //obiekt reader pozwala nam odczytać dane zwrócone przez bazę danych
+            using SqliteDataReader reader = command.ExecuteReader();
+            while (reader.Read()) {
+                // wczytywanie do oobiektu student kolejnych rekordów
+                Student student = new Student {
+                    Id = reader.GetInt32(0),
+                    Firstname = reader.GetString(1),
+                    Lastname = reader.GetString(2),
+                    EnrollmentDate = reader.GetDateTime(3)
+                };
+                Students.Add(student);
+            }
+            conn.Close();
             return Students;
         }
 
@@ -45,7 +43,8 @@ namespace cw10_sqlite.Models
                         "VALUES (@firstname, @lastname, @enrollmentDate)";
             command.Parameters.AddWithValue("@firstname", student.Firstname);
             command.Parameters.AddWithValue("@lastname", student.Lastname);
-            command.Parameters.AddWithValue("@enrollmentDate", student.EnrollmentDate);
+            command.Parameters.AddWithValue("@enrollmentDate", 
+                DateOnly.FromDateTime( student.EnrollmentDate));
             conn.Open();
             command.ExecuteNonQuery();//wykonanie polecenia SQL, które nie zwraca danych
                                       //(INSERT, UPDATE, DELETE)
