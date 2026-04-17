@@ -41,6 +41,26 @@ namespace cw7_layouts_forms.Controllers
             _repo.DeleteUser(id);
             return RedirectToAction("List");
         }
+        [HttpGet]
+        public IActionResult Update(int id)
+        {
+            var user = _repo.GetUserById(id);
+            if (user == null)
+            {
+                return RedirectToAction("List");
+            }
+            return View(user);
+        }
+        [HttpPost]
+        public IActionResult Update(User user)
+        {
+            if (ModelState.IsValid)
+            {
+                _repo.UpdateUser(user);
+                return RedirectToAction("List");
+            }
+            return View(user);
+        }
 
     }
 }

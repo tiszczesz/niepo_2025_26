@@ -57,4 +57,40 @@ public class UsersRepo
         cmd.ExecuteNonQuery();
         conn.Close();
     }
+
+    public User? GetUserById(int id)
+    {
+        using var conn = new SqliteConnection(_connectionString);
+        using SqliteCommand cmd = conn.CreateCommand();
+        cmd.CommandText = "SELECT id, username, email, date FROM Users WHERE id = @id";
+        cmd.Parameters.AddWithValue("@id", id);
+        conn.Open();
+        using SqliteDataReader reader = cmd.ExecuteReader();
+        if (!reader.HasRows)
+        {
+            return null;
+        }
+        reader.Read();
+        var user = new User
+        {
+            Id = reader.GetInt32(0),
+            Username = reader.GetString(1),
+            Email = reader.GetString(2),
+            Date = reader.GetDateTime(3)
+        };
+        return user;
+    }
+    public void UpdateUser(User user){
+        using var conn = new SqliteConnection(_connectionString);
+        using SqliteCommand cmd = conn.CreateCommand();
+        cmd.CommandText = @"UPDATE Users SET username = @username, email = @email, 
+                          date = @date WHERE id = @id";
+        cmd.Parameters.AddWithValue("@username", user.Username);
+        cmd.Parameters.AddWithValue("@email", user.Email);
+        cmd.Parameters.AddWithValue("@date", user.Date);
+        cmd.Parameters.AddWithValue("@id", user.Id);
+        conn.Open();
+        cmd.ExecuteNonQuery();
+        conn.Close();
+    }
 }

@@ -1,0 +1,21 @@
+﻿@model User
+<h2>Edycja użytkownika</h2>
+<form asp-action="Update" method="post">
+    <div class="row m-2">
+        <input type="hidden" asp-for="Id" />
+        <label class="col-3 text-end" asp-for="Username"></label>
+        <input type="text" class="col-6" asp-for="Username" />
+        <span asp-validation-for="Username" class="col-3 text-danger"></span>
+    </div>
+    <div class="row m-2">
+        <label class="col-3 text-end" asp-for="Email"></label>
+        <input type="text" class="col-6" asp-for="Email" />
+        <span asp-validation-for="Email" class="col-3 text-danger"></span>
+    </div>
+    <div class="row m-2">
+        <label class="col-3 text-end" asp-for="Date"></label>
+        <input type="date" class="col-6" asp-for="Date" />
+        <span asp-validation-for="Date" class="col-3 text-danger"></span>
+    </div>
+    <button class="btn btn-outline-primary col-6 offset-3">Zapisz zmiany</button>
+</form>

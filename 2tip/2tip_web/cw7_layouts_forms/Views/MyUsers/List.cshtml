@@ -18,10 +18,14 @@
                 <td>@u.Id</td>
                 <td>@u.Username</td>
                 <td>@u.Email</td>
-                <td>@u.Date?.ToString("yyyy-MM-dd")</td>
+                <td>@u.Date?.ToString("dd-MM-yyyy")</td>
                 <td>
-                    <a asp-route-id="@u.Id" asp-action="Delete" class="btn btn-outline-danger">Usuń</a>
+                    <a asp-route-id="@u.Id" asp-action="Delete" 
+                    class="btn btn-outline-danger">Usuń</a>
+                    <a asp-route-id="@u.Id" asp-action="Update" 
+                    class="btn btn-outline-secondary">Edytuj</a>
                 </td>
+                    
             </tr>
         }
     </tbody>
