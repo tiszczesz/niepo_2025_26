@@ -19,4 +19,18 @@ public class UnitTestUser
         // Assert
         Assert.NotNull(user);
     }
+    [Fact]
+    public void If_User_Has_CreatedAt()
+    {
+        // Arrange
+        var user = new User
+        {
+            Id = 1,
+            Name = "John Doe",
+            Email = "john.doe@example.com"
+        };
+        // Assert
+        //Assert.NotNull(user.CreatedAt);
+        Assert.True(user.CreatedAt <= DateTime.Now);
+    }
 }
