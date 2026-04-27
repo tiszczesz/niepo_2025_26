@@ -1,0 +1,19 @@
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.slider img {
+  border: solid 1px black;
+  box-shadow: 1px 1px 5px black;
+  border-radius: 10px;
+}
+.slider button {
+  height: 300px;
+  padding: 10px;
+  font-size: 20px;
+  border: solid 1px black;
+  box-shadow: 1px 1px 5px black;
+  border-radius: 10px;
+}
