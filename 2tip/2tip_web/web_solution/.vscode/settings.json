@@ -1,1 +1,11 @@
-{}
+{
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.includeLanguages": {
+        "razor": "html",
+        "aspnetcorerazor": "html"
+    },
+    "files.associations": {
+        "*.cshtml": "aspnetcorerazor",
+        "*.cshtm": "aspnetcorerazor"
+    }
+}
