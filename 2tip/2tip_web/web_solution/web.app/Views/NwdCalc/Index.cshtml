@@ -1,19 +1,18 @@
 ﻿@model NwdViewModel
 <h1>NWD Calculator</h1>
 <form method="post" asp-action="Index">
-    <div class="form-group">
+    <div class="form-group m-2">
         <label for="number1">Number 1:</label>
-        <input type="number" class="form-control" value="@Model.A" required>
+        <input type="number" class="form-control" asp-for="@Model.A" required>
     </div>
-    <div class="form-group">
+    <div class="form-group m-2">
         <label for="number2">Number 2:</label>
-        <input type="number" class="form-control"  value="@Model.B" required>
+        <input type="number" class="form-control" asp-for="@Model.B" required>
     </div>
-    <div class="form-group">
+    <div class="form-group m-2">
         <label for="result">Metoda obliczenia:</label>
-        <select class="form-control" id="result" asp
-                asp-for="@Model.Choice" >
-           @foreach (var method in ViewBag.CalculationMethods as List<CalculationMethod>)
+        <select class="form-control" id="result" asp asp-for="@Model.Choice">
+            @foreach (var method in ViewBag.CalculationMethods as List<CalculationMethod>)
             {
                 <option value="@method">@method</option>
             }
@@ -21,4 +20,11 @@
     </div>
     <button type="submit" class="btn btn-primary">Oblicz NWD</button>
 </form>
+<hr>
+@if (ViewBag.Message != null)
+{
+    <div class="alert alert-info">
+        @ViewBag.Message
+    </div>
+}
 

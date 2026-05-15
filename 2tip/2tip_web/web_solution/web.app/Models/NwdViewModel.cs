@@ -11,6 +11,6 @@ public class NwdViewModel
 }
 public enum CalculationMethod
 {
-    Iterative,
-    Recursive
+    Iteracyjnie,
+    Rekurencyjnie,
 }
