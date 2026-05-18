@@ -19,7 +19,19 @@ namespace cw11.Models
             using  SqlConnection connection = new SqlConnection(connectionString);
             using SqlCommand command = connection.CreateCommand();
             var students = new List<Student>();
-
+            using SqlDataReader reader = command.ExecuteReader();
+            connection.Open();
+            while (reader.Read())
+            {
+                students.Add(new Student
+                {
+                    Id = reader.GetInt32(0),
+                    Firstname = reader.GetString(1),
+                    Lastname = reader.GetString(2),
+                    Age = reader.GetInt32(3),
+                    DivisionId = reader.GetInt32(4)
+                });
+            }
             return students;
         }
     }
