@@ -1,0 +1,6 @@
+﻿SET IDENTITY_INSERT [dbo].[Divisions] ON
+INSERT INTO [dbo].[Divisions] ([Id], [Name], [Description]) VALUES (1, N'Matematyka', N'królowa nauk')
+INSERT INTO [dbo].[Divisions] ([Id], [Name], [Description]) VALUES (2, N'Fizyka', N'nauka o przyrodzie')
+INSERT INTO [dbo].[Divisions] ([Id], [Name], [Description]) VALUES (3, N'Informatyka', N'nauka o przetwarzania danych')
+INSERT INTO [dbo].[Divisions] ([Id], [Name], [Description]) VALUES (4, N'Programowanie w C++', N'Podstawowy język obiektowy')
+SET IDENTITY_INSERT [dbo].[Divisions] OFF
