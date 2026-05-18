@@ -14,6 +14,7 @@ build_property.ProjectTypeGuids =
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
+build_property.EntryPointFilePath = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = cw11
 build_property.ProjectDir = E:\tools\GitHub\niepo_2025_26\2tip\2tip_desk\cw11\
