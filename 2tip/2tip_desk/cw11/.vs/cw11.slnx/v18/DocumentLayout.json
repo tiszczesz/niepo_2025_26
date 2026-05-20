@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "E:\\tools\\GitHub\\niepo_2025_26\\2tip\\2tip_desk\\cw11\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{603693AC-B0C7-B60A-B2CA-9A2FE41058FB}|cw11.csproj|e:\\tools\\github\\niepo_2025_26\\2tip\\2tip_desk\\cw11\\models\\studentsrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{603693AC-B0C7-B60A-B2CA-9A2FE41058FB}|cw11.csproj|solutionrelative:models\\studentsrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{603693AC-B0C7-B60A-B2CA-9A2FE41058FB}|cw11.csproj|e:\\tools\\github\\niepo_2025_26\\2tip\\2tip_desk\\cw11\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{603693AC-B0C7-B60A-B2CA-9A2FE41058FB}|cw11.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{603693AC-B0C7-B60A-B2CA-9A2FE41058FB}|cw11.csproj|E:\\tools\\GitHub\\niepo_2025_26\\2tip\\2tip_desk\\cw11\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{603693AC-B0C7-B60A-B2CA-9A2FE41058FB}|cw11.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{603693AC-B0C7-B60A-B2CA-9A2FE41058FB}|cw11.csproj|e:\\tools\\github\\niepo_2025_26\\2tip\\2tip_desk\\cw11\\models\\studentsrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{603693AC-B0C7-B60A-B2CA-9A2FE41058FB}|cw11.csproj|solutionrelative:models\\studentsrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{603693AC-B0C7-B60A-B2CA-9A2FE41058FB}|cw11.csproj|e:\\tools\\github\\niepo_2025_26\\2tip\\2tip_desk\\cw11\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,13 +62,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "StudentsRepo.cs",
               "DocumentMoniker": "E:\\tools\\GitHub\\niepo_2025_26\\2tip\\2tip_desk\\cw11\\Models\\StudentsRepo.cs",
               "RelativeDocumentMoniker": "Models\\StudentsRepo.cs",
-              "ToolTip": "E:\\tools\\GitHub\\niepo_2025_26\\2tip\\2tip_desk\\cw11\\Models\\StudentsRepo.cs*",
-              "RelativeToolTip": "Models\\StudentsRepo.cs*",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwBEAAAAsAAAAAAAAAA==",
+              "ToolTip": "E:\\tools\\GitHub\\niepo_2025_26\\2tip\\2tip_desk\\cw11\\Models\\StudentsRepo.cs",
+              "RelativeToolTip": "Models\\StudentsRepo.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwBUAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-18T09:22:17.751Z",
               "EditorCaption": ""
@@ -99,13 +99,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Form1.cs",
               "DocumentMoniker": "E:\\tools\\GitHub\\niepo_2025_26\\2tip\\2tip_desk\\cw11\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "E:\\tools\\GitHub\\niepo_2025_26\\2tip\\2tip_desk\\cw11\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAqwBUAAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-18T08:58:30.517Z",
               "EditorCaption": ""
@@ -124,7 +124,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "E:\\tools\\GitHub\\niepo_2025_26\\2tip\\2tip_desk\\cw11\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",

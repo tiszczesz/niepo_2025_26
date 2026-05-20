@@ -35,5 +35,23 @@ namespace cw11.Models
             }
             return students;
         }
+
+        public Division? GetDivisionByIDivision(int divisionId) {
+            using SqlConnection connection = new SqlConnection(connectionString);
+            using SqlCommand command = connection.CreateCommand();
+            command.CommandText = "SELECT * FROM Divisions WHERE Id = @divisionId";
+            command.Parameters.AddWithValue("@divisionId", divisionId);
+            connection.Open();
+            Division _division = null;
+            using SqlDataReader reader = command.ExecuteReader();
+            if (reader.Read()) {
+                _division = new Division(){
+                    Id = reader.GetInt32(0),
+                    Name = reader.GetString(1),
+                    Description = reader.IsDBNull(2) ? null : reader.GetString(2)
+                };
+            }
+            return _division;
+        }
     }
 }
