@@ -18,9 +18,10 @@ namespace cw11.Models
         public List<Student> GetStudents() {
             using  SqlConnection connection = new SqlConnection(connectionString);
             using SqlCommand command = connection.CreateCommand();
+            command.CommandText = "SELECT * FROM Students";
             var students = new List<Student>();
-            using SqlDataReader reader = command.ExecuteReader();
             connection.Open();
+            using SqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
                 students.Add(new Student

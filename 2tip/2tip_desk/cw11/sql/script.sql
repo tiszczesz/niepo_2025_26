@@ -1,3 +1,7 @@
+CREATE DATABASE [studentsDb] ON PRIMARY 
+( NAME = N'studentsDb', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\studentsDb.mdf' , SIZE = 8192KB , FILEGROWTH = 65536KB )
+
+
 CREATE TABLE [dbo].[Students] (
     [Id]         INT           IDENTITY (1, 1) NOT NULL,
     [Firstname]  NVARCHAR (50) NULL,
