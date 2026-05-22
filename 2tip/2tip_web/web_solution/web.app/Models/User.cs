@@ -8,4 +8,7 @@ public class User
     public string Name { get; set; }
     public string Email { get; set; }
     public DateTime CreatedAt { get; set; } = DateTime.Now;
+    public int RoleId { get; set; }
+    public Role? MyRole { get; set; }
+
 }

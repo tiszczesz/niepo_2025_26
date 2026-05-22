@@ -5,5 +5,5 @@ var app = builder.Build();
 app.UseStaticFiles();
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=NwdCalc}/{action=Index}/{id?}");
+    pattern: "{controller=Company}/{action=Index}/{id?}");
 app.Run();
