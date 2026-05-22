@@ -5,12 +5,18 @@ namespace web.app.Models;
 public class CompanyFakeRepo : ICompanyRepo
 {
     public List<User> FakeUsers { get; set; }
+    public List<Role> FakeRoles { get; set; }
     public CompanyFakeRepo()
     {
         FakeUsers = new List<User>()
         {
             new User(){ Id = 1, Name = "John Doe", Email = "john.doe@example.com" },
             new User(){ Id = 2, Name = "Jane Smith", Email = "jane.smith@example.com" }
+        };
+        FakeRoles = new List<Role>()
+        {
+            new Role(){ Id = 1, Name = "Admin", Description = "Administrator role" },
+            new Role(){ Id = 2, Name = "User", Description = "Regular user role" }
         };
     }
     public void AddRole(Role role)
