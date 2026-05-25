@@ -28,15 +28,32 @@ namespace cw11
         private void dataGridView1_DoubleClick(object sender, EventArgs e)
         {
             //tutaj dodajemy obsługę na Doubleclick
-            if (dataGridView1.SelectedRows.Count > 0) {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
                 Student? selectedStudent = (Student)dataGridView1.SelectedRows[0].DataBoundItem;
-                if(selectedStudent != null) {
+                if (selectedStudent != null)
+                {
                     panel2.Visible = true;
                     lbFirstname.Text = $"{selectedStudent.Firstname} {selectedStudent.Lastname}";
+                    Division? division = _repo.GetDivisionByIDivision(selectedStudent.DivisionId);
+                    if (division != null)
+                    {
+                        lbDivision.Text = division.Name;
+                    }
+                    else
+                    {
+                        lbDivision.Text = "Nieznany wydział";
+                    }
                     //MessageBox.Show(
                     //    $"Wybrany student: {selectedStudent.Firstname} id wydziału: {selectedStudent.DivisionId}");
                 }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e) {
+            var form = new AddStudentForm();
+            form.ShowDialog(); // Otwieramy formularz dodawania studenta jako modalny
+            LoadStudentsToGrid();
         }
     }
 }

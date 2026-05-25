@@ -29,38 +29,27 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            dataGridView1 = new DataGridView();
             panel2 = new Panel();
-            label1 = new Label();
-            lbFirstname = new Label();
             lbDivision = new Label();
+            lbFirstname = new Label();
+            label1 = new Label();
+            dataGridView1 = new DataGridView();
+            button1 = new Button();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(255, 255, 192);
+            panel1.Controls.Add(button1);
             panel1.Controls.Add(panel2);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(200, 450);
             panel1.TabIndex = 0;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.Location = new Point(200, 0);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.Size = new Size(600, 450);
-            dataGridView1.TabIndex = 1;
-            dataGridView1.DoubleClick += dataGridView1_DoubleClick;
             // 
             // panel2
             // 
@@ -75,14 +64,14 @@
             panel2.Size = new Size(200, 89);
             panel2.TabIndex = 0;
             // 
-            // label1
+            // lbDivision
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(3, 8);
-            label1.Name = "label1";
-            label1.Size = new Size(182, 15);
-            label1.TabIndex = 0;
-            label1.Text = "Nazwa wydziału dla użytkownika:";
+            lbDivision.AutoSize = true;
+            lbDivision.Location = new Point(3, 57);
+            lbDivision.Name = "lbDivision";
+            lbDivision.Size = new Size(38, 15);
+            lbDivision.TabIndex = 2;
+            lbDivision.Text = "label2";
             // 
             // lbFirstname
             // 
@@ -93,14 +82,37 @@
             lbFirstname.TabIndex = 1;
             lbFirstname.Text = "label2";
             // 
-            // lbDivision
+            // label1
             // 
-            lbDivision.AutoSize = true;
-            lbDivision.Location = new Point(3, 57);
-            lbDivision.Name = "lbDivision";
-            lbDivision.Size = new Size(38, 15);
-            lbDivision.TabIndex = 2;
-            lbDivision.Text = "label2";
+            label1.AutoSize = true;
+            label1.Location = new Point(3, 8);
+            label1.Name = "label1";
+            label1.Size = new Size(182, 15);
+            label1.TabIndex = 0;
+            label1.Text = "Nazwa wydziału dla użytkownika:";
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Dock = DockStyle.Fill;
+            dataGridView1.Location = new Point(200, 0);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
+            dataGridView1.Size = new Size(600, 450);
+            dataGridView1.TabIndex = 1;
+            dataGridView1.DoubleClick += dataGridView1_DoubleClick;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(12, 104);
+            button1.Name = "button1";
+            button1.Size = new Size(174, 23);
+            button1.TabIndex = 1;
+            button1.Text = "Dodaj studenta";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // Form1
             // 
@@ -112,9 +124,9 @@
             Name = "Form1";
             Text = "Form1";
             panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
@@ -126,5 +138,6 @@
         private Label label1;
         private Label lbDivision;
         private Label lbFirstname;
+        private Button button1;
     }
 }
