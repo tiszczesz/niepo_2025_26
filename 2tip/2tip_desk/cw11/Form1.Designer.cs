@@ -30,12 +30,19 @@
         {
             panel1 = new Panel();
             dataGridView1 = new DataGridView();
+            panel2 = new Panel();
+            label1 = new Label();
+            lbFirstname = new Label();
+            lbDivision = new Label();
+            panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(255, 255, 192);
+            panel1.Controls.Add(panel2);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
@@ -53,6 +60,47 @@
             dataGridView1.ReadOnly = true;
             dataGridView1.Size = new Size(600, 450);
             dataGridView1.TabIndex = 1;
+            dataGridView1.DoubleClick += dataGridView1_DoubleClick;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.FromArgb(255, 224, 192);
+            panel2.BorderStyle = BorderStyle.FixedSingle;
+            panel2.Controls.Add(lbDivision);
+            panel2.Controls.Add(lbFirstname);
+            panel2.Controls.Add(label1);
+            panel2.Dock = DockStyle.Top;
+            panel2.Location = new Point(0, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(200, 89);
+            panel2.TabIndex = 0;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(3, 8);
+            label1.Name = "label1";
+            label1.Size = new Size(182, 15);
+            label1.TabIndex = 0;
+            label1.Text = "Nazwa wydziału dla użytkownika:";
+            // 
+            // lbFirstname
+            // 
+            lbFirstname.AutoSize = true;
+            lbFirstname.Location = new Point(3, 32);
+            lbFirstname.Name = "lbFirstname";
+            lbFirstname.Size = new Size(38, 15);
+            lbFirstname.TabIndex = 1;
+            lbFirstname.Text = "label2";
+            // 
+            // lbDivision
+            // 
+            lbDivision.AutoSize = true;
+            lbDivision.Location = new Point(3, 57);
+            lbDivision.Name = "lbDivision";
+            lbDivision.Size = new Size(38, 15);
+            lbDivision.TabIndex = 2;
+            lbDivision.Text = "label2";
             // 
             // Form1
             // 
@@ -63,7 +111,10 @@
             Controls.Add(panel1);
             Name = "Form1";
             Text = "Form1";
+            panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -71,5 +122,9 @@
 
         private Panel panel1;
         private DataGridView dataGridView1;
+        private Panel panel2;
+        private Label label1;
+        private Label lbDivision;
+        private Label lbFirstname;
     }
 }
