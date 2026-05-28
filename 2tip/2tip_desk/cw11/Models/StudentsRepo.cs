@@ -53,5 +53,17 @@ namespace cw11.Models
             }
             return _division;
         }
+
+        public void AddStudent(Student student) {
+            using SqlConnection connection = new SqlConnection(connectionString);
+            using SqlCommand command = connection.CreateCommand();
+            command.CommandText = "INSERT INTO Students (Firstname, Lastname, Age, DivisionId) VALUES (@firstname, @lastname, @age, @divisionId)";
+            command.Parameters.AddWithValue("@firstname", student.Firstname);
+            command.Parameters.AddWithValue("@lastname", student.Lastname);
+            command.Parameters.AddWithValue("@age", student.Age);
+            command.Parameters.AddWithValue("@divisionId", student.DivisionId);
+            connection.Open();
+            command.ExecuteNonQuery();
+        }
     }
 }

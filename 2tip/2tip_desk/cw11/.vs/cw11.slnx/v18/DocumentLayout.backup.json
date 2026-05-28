@@ -11,12 +11,16 @@
       "RelativeMoniker": "D:0:0:{603693AC-B0C7-B60A-B2CA-9A2FE41058FB}|cw11.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{603693AC-B0C7-B60A-B2CA-9A2FE41058FB}|cw11.csproj|e:\\tools\\github\\niepo_2025_26\\2tip\\2tip_desk\\cw11\\models\\studentsrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{603693AC-B0C7-B60A-B2CA-9A2FE41058FB}|cw11.csproj|solutionrelative:models\\studentsrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{603693AC-B0C7-B60A-B2CA-9A2FE41058FB}|cw11.csproj|e:\\tools\\github\\niepo_2025_26\\2tip\\2tip_desk\\cw11\\addstudentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{603693AC-B0C7-B60A-B2CA-9A2FE41058FB}|cw11.csproj|solutionrelative:addstudentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{603693AC-B0C7-B60A-B2CA-9A2FE41058FB}|cw11.csproj|e:\\tools\\github\\niepo_2025_26\\2tip\\2tip_desk\\cw11\\sql\\script.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
       "RelativeMoniker": "D:0:0:{603693AC-B0C7-B60A-B2CA-9A2FE41058FB}|cw11.csproj|solutionrelative:sql\\script.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{603693AC-B0C7-B60A-B2CA-9A2FE41058FB}|cw11.csproj|e:\\tools\\github\\niepo_2025_26\\2tip\\2tip_desk\\cw11\\models\\studentsrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{603693AC-B0C7-B60A-B2CA-9A2FE41058FB}|cw11.csproj|solutionrelative:models\\studentsrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{603693AC-B0C7-B60A-B2CA-9A2FE41058FB}|cw11.csproj|e:\\tools\\github\\niepo_2025_26\\2tip\\2tip_desk\\cw11\\models\\division.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,6 +33,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{603693AC-B0C7-B60A-B2CA-9A2FE41058FB}|cw11.csproj|e:\\tools\\github\\niepo_2025_26\\2tip\\2tip_desk\\cw11\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{603693AC-B0C7-B60A-B2CA-9A2FE41058FB}|cw11.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{603693AC-B0C7-B60A-B2CA-9A2FE41058FB}|cw11.csproj|e:\\tools\\github\\niepo_2025_26\\2tip\\2tip_desk\\cw11\\sql\\script.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{603693AC-B0C7-B60A-B2CA-9A2FE41058FB}|cw11.csproj|solutionrelative:sql\\script.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,6 +74,18 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AddStudentForm.cs [Design]",
+              "DocumentMoniker": "E:\\tools\\GitHub\\niepo_2025_26\\2tip\\2tip_desk\\cw11\\AddStudentForm.cs",
+              "RelativeDocumentMoniker": "AddStudentForm.cs",
+              "ToolTip": "E:\\tools\\GitHub\\niepo_2025_26\\2tip\\2tip_desk\\cw11\\AddStudentForm.cs [Design]",
+              "RelativeToolTip": "AddStudentForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T09:28:13.42Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "E:\\tools\\GitHub\\niepo_2025_26\\2tip\\2tip_desk\\cw11\\Form1.cs",
@@ -79,17 +99,18 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "script.sql",
+              "Title": "script.sql ",
               "DocumentMoniker": "E:\\tools\\GitHub\\niepo_2025_26\\2tip\\2tip_desk\\cw11\\sql\\script.sql",
               "RelativeDocumentMoniker": "sql\\script.sql",
               "ToolTip": "E:\\tools\\GitHub\\niepo_2025_26\\2tip\\2tip_desk\\cw11\\sql\\script.sql",
               "RelativeToolTip": "sql\\script.sql",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2026-05-20T06:43:08.006Z"
+              "WhenOpened": "2026-05-20T06:43:08.006Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "StudentsRepo.cs",
               "DocumentMoniker": "E:\\tools\\GitHub\\niepo_2025_26\\2tip\\2tip_desk\\cw11\\Models\\StudentsRepo.cs",
               "RelativeDocumentMoniker": "Models\\StudentsRepo.cs",
@@ -102,7 +123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Student.cs",
               "DocumentMoniker": "E:\\tools\\GitHub\\niepo_2025_26\\2tip\\2tip_desk\\cw11\\Models\\Student.cs",
               "RelativeDocumentMoniker": "Models\\Student.cs",
@@ -114,7 +135,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Division.cs",
               "DocumentMoniker": "E:\\tools\\GitHub\\niepo_2025_26\\2tip\\2tip_desk\\cw11\\Models\\Division.cs",
               "RelativeDocumentMoniker": "Models\\Division.cs",
@@ -132,14 +153,14 @@
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "E:\\tools\\GitHub\\niepo_2025_26\\2tip\\2tip_desk\\cw11\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAowCkAAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowDEAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-18T08:58:30.517Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\tools\\GitHub\\niepo_2025_26\\2tip\\2tip_desk\\cw11\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
