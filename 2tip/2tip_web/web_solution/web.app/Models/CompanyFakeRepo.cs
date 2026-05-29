@@ -10,8 +10,10 @@ public class CompanyFakeRepo : ICompanyRepo
     {
         FakeUsers = new List<User>()
         {
-            new User(){ Id = 1, Name = "John Doe", Email = "john.doe@example.com" },
-            new User(){ Id = 2, Name = "Jane Smith", Email = "jane.smith@example.com" }
+            new User(){ Id = 1, Name = "John Doe", Email = "john.doe@example.com" , RoleId = 1},
+            new User(){ Id = 2, Name = "Jane Smith", Email = "jane.smith@example.com" , RoleId = 2},
+            new User(){ Id = 3, Name = "Bob Johnson", Email = "bob.johnson@example.com" , RoleId = 2},
+            new User(){ Id = 4, Name = "Alice Williams", Email = "alice.williams@example.com" , RoleId = 2}
         };
         FakeRoles = new List<Role>()
         {
