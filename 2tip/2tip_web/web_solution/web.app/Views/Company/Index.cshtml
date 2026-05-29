@@ -1,2 +1,23 @@
-﻿
+﻿@model List<User>
 <h2>Lista użytkowników</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nazwa użytkownika</th>
+            <th>Email</th>
+            <th>Data utworzenia</th>
+            <th>RolaId</th>
+        </tr>
+        <tbody>
+            @foreach (var user in Model)
+            {
+                <tr>
+                    <td>@user.Name</td>
+                    <td>@user.Email</td>
+                    <td>@user.CreatedAt.ToString("yyyy-MM-dd")</td>
+                    <td>@user?.MyRole?.Name</td>
+                </tr>
+            }
+        </tbody>
+    </thead>
+</table>

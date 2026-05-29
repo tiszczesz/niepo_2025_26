@@ -53,7 +53,7 @@ public class CompanyFakeRepo : ICompanyRepo
 
     public Role? GetRoleById(int id)
     {
-        throw new NotImplementedException();
+        return FakeRoles.FirstOrDefault(r => r.Id == id);
     }
 
     public User? GetUserById(int id)
